@@ -1,2 +1,6 @@
-.trunk
-.sass-cache
+*out
+external
+**.sass-cache**
+**.trunk**
+static/css/css.css.map
+.sass/css.css

@@ -17,13 +17,16 @@ body {
 intro {
   display: flex;
   font-family: "Noto Sans Mono", monospace;
+  -webkit-animation-name: blur_fadein;
   animation-name: blur_fadein;
+  -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
 
   margin: 2rem;
   icon {
     img {
       width: 512px;
+      -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
       clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     }
 
@@ -63,13 +66,28 @@ intro {
   }
 }
 
-@keyframes blur_fadein {
+@-webkit-keyframes blur_fadein {
   from {
     opacity: 0%;
+    -webkit-filter: blur(10px);
     filter: blur(10px);
   }
   to {
     opacity: 100%;
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+  }
+}
+
+@keyframes blur_fadein {
+  from {
+    opacity: 0%;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 100%;
+    -webkit-filter: blur(0px);
     filter: blur(0px);
   }
 }
