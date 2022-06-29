@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap");
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
   display: flex;
@@ -10,36 +11,81 @@ body {
   align-items: center;
   align-content: center;
   height: 100vh;
-  font-family: "Noto Sans Mono", monospace; }
+}
 
 intro {
-  display: flex; }
-  intro icon {
-    display: flex;
-    align-items: flex-end; }
-    intro icon img {
-      width: 512px;
-      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
-    intro icon p {
-      margin-left: -10rem;
-      color: rgba(0, 0, 0, 0.4);
-      font-size: 2rem; }
-    intro icon a {
-      color: rgba(255, 175, 204, 0.75);
-      text-decoration: none;
-      transition: color 0.5s; }
-    intro icon a:where(:hover, :focus) {
-      color: #ffafcc; }
-  intro text {
-    display: flex;
+  display: flex;
+  font-family: "Noto Sans Mono", monospace;
+  animation-name: blur_fadein;
+  animation-duration: 1.5s;
+  margin: 2rem;
+}
+intro icon img {
+  width: 512px;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+intro icon p {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1.25rem;
+  text-align: center;
+}
+intro icon a {
+  color: rgba(255, 175, 204, 0.65);
+  text-decoration: none;
+  transition: color 0.5s;
+  font-size: 1.5rem;
+}
+intro icon a:where(:hover, :focus) {
+  color: #ffafcc;
+}
+intro text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+intro text h1 {
+  color: #ffafcc;
+  font-size: 4rem;
+}
+intro text p {
+  color: #a6d0fc;
+  font-size: 1.75rem;
+}
+
+@keyframes blur_fadein {
+  from {
+    opacity: 0%;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 100%;
+    filter: blur(0px);
+  }
+}
+@media only screen and (max-width: 800px) {
+  intro {
     flex-direction: column;
-    justify-content: center; }
-    intro text h1 {
-      color: #ffafcc;
-      font-size: 4rem; }
-    intro text p {
-      color: #a6d0fc;
-      text-align: right;
-      font-size: 1.75rem; }
+  }
+  intro icon img {
+    width: 350px;
+  }
+  intro icon p {
+    font-size: 1rem;
+    padding-bottom: 1.25rem;
+  }
+  intro icon a {
+    font-size: 1.25rem;
+  }
+  intro text h1 {
+    font-size: 2rem;
+  }
+  intro text h2 {
+    font-size: 1rem;
+  }
+  intro text p {
+    font-size: 1.1rem;
+  }
+}
 
 /*# sourceMappingURL=css.css.map */
