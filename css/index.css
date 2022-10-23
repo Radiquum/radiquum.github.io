@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #ffafcc;
+    --primary-color-unhover: #fec7dbb4;
+    --links-background-color-unactive: rgba(121, 121, 121, 0.1);
+    --links-background-color-active: rgba(121, 121, 121, 0.25);
+    --secondary-color: rgba(165, 208, 251, 0.5);
+    --bg-color: #fdfeff;
+}
+
+.darkmode {
+    --primary-color: #cc8ca3;
+    --primary-color-unhover: rgba(254, 199, 219, 0.65);
+    --links-background-color-unactive: rgba(121, 121, 121, 0.1);
+    --links-backfround-color-active: rgba(121, 121, 121, 0.25);
+    --secondary-color: rgba(131, 165, 199, 0.5);
+    --bg-color: #494949;
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+    color: var(--foreground);
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+  }
+
+
+#light, #dark {
+    font-size: 1.2rem;
+}
+.disable {
+    display: none;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background: var(--bg-color);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ICON {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.ICON .artist{
+    rotate: -30deg;
+    color: var(--primary-color-unhover);
+    font-size: 1.75em;
+    transform: translateX(5em);
+}
+
+.ICON .artist a, a:visited{
+    color: var(--primary-color-unhover);
+    text-decoration: none;
+    transition: color 0.5s ;
+}
+
+.ICON .artist a:where(:hover, :focus){
+    color: var(--primary-color);
+}
+
+.name {
+    color: var(--primary-color);
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.links-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    margin-block: 2rem;
+
+    text-align: center;
+    width: 100%;
+    z-index: 90;
+}
+
+iconify-icon {
+    display: block;
+}
+
+.links a{
+    font-size: 1em;
+    padding: 0.5em;
+    text-align: center;
+
+    background-color: var(--links-background-color-unactive);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease;
+}
+
+.links a:where(:hover, :focus){
+    font-size: 1.25em;
+    padding: 0.55em;
+    text-align: center;
+
+    background-color: var(--links-background-color-active);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    gap: 0.5rem;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 500px) {
+    .ICON img {
+        width: 256px;
+        height: 256px;
+    }
+    .ICON .artist {
+        font-size: 1rem;
+    }
+    .name {
+        font-size: 2rem;
+        top: 37vh;
+    }
+    .links-container{
+        top: 47vh;
+    }
+    .links{
+        font-size: 2rem;
+        gap: 2rem;
+    }
+}

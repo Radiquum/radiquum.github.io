@@ -1,96 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="static/css/css.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kentai Radiquum [V5]</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/background.css">
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="static/favicon/apple-touch-icon.png"
+      href="favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="static/favicon/favicon-32x32.png"
+      href="favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="static/favicon/favicon-16x16.png"
+      href="favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="static/favicon/site.webmanifest" />
-    <title>Kentai Radiquum</title>
-    <meta name="title" content="Kentai Radiquum" />
-    <meta name="description" content="little fluffy protowah" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Kentai Radiquum" />
-    <meta property="og:title" content="Kentai Radiquum" />
-    <meta property="og:description" content="little fluffy protowah" />
-    <meta property="og:url" content="https://radiquum.github.io" />
-    <meta property="og:image" content="static/images/icon.jpg" />
-  </head>
-  <body>
-    <intro>
-      <icon>
-        <div class="icon"></div>
-        <p>artist <a href="https://vk.com/yoshi_ruko">YØSHI</a></p>
-      </icon>
+    <link rel="manifest" href="favicon/site.webmanifest" />
+</head>
+<body>
 
-      <text>
-        <h2>Hi, I'm</h2>
-        <h1>Kentai Radiquum</h1>
-        <p>little fluffy protowah</p>
-      </text>
-    </intro>
+<div class="content">
+    <div class="ICON" >
+        <img src="AVATAR.svg" />
+        <p class="artist">🎨 <a href="https://vk.com/yoshi_ruko" target="_blank">YØSHI</a></p>
+    </div>
+    <h1 class="name">Kentai Radiquum</h1>
+    <div class="links-container">
+        <div class="links">
+            <a class="link" href="https://furaffinity.net/user/Radiquum" target="_blank"><iconify-icon icon="cib:fur-affinity" style="color: orange;"></iconify-icon></a>
+            <a class="link" href="https://t.me/Radiquum" target="_blank"><iconify-icon icon="cib:telegram" style="color: #699bf7;"></iconify-icon></a>
+            <a class="link" href="https://vk.com/Radiquum" target="_blank"><iconify-icon icon="cib:vk" style="color: #1769aa;"></iconify-icon></a>
+            <a class="link" href="https://github.com/Radiquum" target="_blank"><iconify-icon icon="cib:github" style="color: black;"></iconify-icon></a>
+            <a class="link" href="https://osu.ppy.sh/users/10954997" target="_blank"><iconify-icon icon="simple-icons:osu" style="color: pink;"></iconify-icon></a>
+        </div>
+    </div>
+</div>
+<div class="bg" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div >
 
-    <description>
-      <p>Red Pandas lover. self taught python, html & css programmer.</p>
-      <p>I enjoy:</p>
-      <ul>
-        <li>music, mostly electronic & rock.</li>
-        <li>games, mainly osu!</li>
-        <li>cuddles and fluffy things.</li>
-        <li>more to be added...</li>
-      </ul>
-    </description>
+<button id="dark-mode-toggle" class="dark-mode-toggle">
+    <iconify-icon icon="carbon:light-filled" id="dark"></iconify-icon>
+    <iconify-icon icon="carbon:moon" id="light"></iconify-icon>
+</button>
 
-    <links>
-      <a
-        class="asset fa"
-        aria-label="FurAffinity."
-        href="https://furaffinity.net/user/radiquum"
-      ></a>
-      <a
-        class="asset git-hub"
-        aria-label="GitHub."
-        href="https://github.com/radiquum"
-      ></a>
-      <a
-        class="asset vk"
-        aria-label="VKontakte."
-        href="https://vk.com/radiquum"
-      ></a>
-      <a
-        class="asset tg"
-        aria-label="Telegram."
-        href="https://t.me/radiquum"
-      ></a>
-      <a
-        class="asset twitter"
-        aria-label="Twitter."
-        href="https://twitter.com/radiquum"
-      ></a>
-      <a
-        class="asset unsplash"
-        aria-label="Unsplash."
-        href="https://unsplash.com/radiquum"
-      ></a>
-    </links>
-  </body>
+</body>
+<script src="darkmode.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 </html>
