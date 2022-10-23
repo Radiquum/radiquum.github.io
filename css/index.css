@@ -3,8 +3,8 @@
 :root {
     --primary-color: #ffafcc;
     --primary-color-unhover: #fec7dbb4;
-    --links-background-color-unactive: rgba(121, 121, 121, 0.1);
-    --links-background-color-active: rgba(121, 121, 121, 0.25);
+    --links-background-color-unactive: rgba(158, 175, 211, 0.1);
+    --links-background-color-active: rgba(158, 175, 211, 0.25);
     --secondary-color: rgba(165, 208, 251, 0.5);
     --bg-color: #fdfeff;
 }
@@ -13,7 +13,7 @@
     --primary-color: #cc8ca3;
     --primary-color-unhover: rgba(254, 199, 219, 0.65);
     --links-background-color-unactive: rgba(121, 121, 121, 0.1);
-    --links-backfround-color-active: rgba(121, 121, 121, 0.25);
+    --links-background-color-active: rgba(121, 121, 121, 0.5);
     --secondary-color: rgba(131, 165, 199, 0.5);
     --bg-color: #494949;
 }
@@ -49,6 +49,7 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
     background: var(--bg-color);
+    transition: background 0.5s ;
 }
 
 .content {
