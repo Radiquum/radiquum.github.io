@@ -10,8 +10,8 @@
 }
 
 .darkmode {
-    --primary-color: #cc8ca3;
-    --primary-color-unhover: rgba(254, 199, 219, 0.65);
+    --primary-color: #d893ac;
+    --primary-color-unhover: rgba(254, 199, 219, 0.76);
     --links-background-color-unactive: rgba(121, 121, 121, 0.1);
     --links-background-color-active: rgba(121, 121, 121, 0.5);
     --secondary-color: rgba(131, 165, 199, 0.5);
@@ -23,7 +23,7 @@
     z-index: 100;
     top: 1em;
     right: 1em;
-    color: var(--foreground);
+    color: var(--primary-color);
     border: 2px solid currentColor;
     padding: 4px;
     background: transparent;
@@ -31,12 +31,12 @@
     border-radius: 5px;
     width: 30px;
     height: 30px;
-  }
-
+}
 
 #light, #dark {
     font-size: 1.2rem;
 }
+
 .disable {
     display: none;
 }
@@ -49,7 +49,7 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
     background: var(--bg-color);
-    transition: background 0.5s ;
+    transition: background 0.5s ease-in-out;
 }
 
 .content {
@@ -61,12 +61,9 @@ body{
     align-items: center;
 }
 
-
 .ICON {
     margin-top: 2rem;
-    width: 100%;
     text-align: center;
-    overflow: hidden;
     z-index: 100;
 }
 
@@ -93,7 +90,7 @@ body{
     width: 100%;
     z-index: 100;
     overflow: hidden;
-    margin-top: 2rem;
+    margin-block: 1rem;
     font-size: 3rem;
     font-weight: 600;
 }
@@ -106,15 +103,29 @@ body{
     justify-content: center;
     align-items: center;
 
-    margin-block: 2rem;
+    width: 100%;
 
     text-align: center;
-    width: 100%;
     z-index: 90;
 }
 
 iconify-icon {
     display: block;
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    gap: 0.5rem;
+    font-size: 3rem;
+}
+
+.links:last-child {
+    margin-bottom: 1rem;
 }
 
 .links a{
@@ -138,31 +149,17 @@ iconify-icon {
     backdrop-filter: blur(10px);
 }
 
-.links{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 50%;
-    gap: 0.5rem;
-    font-size: 3rem;
-}
-
 @media screen and (max-width: 500px) {
     .ICON img {
-        width: 256px;
-        height: 256px;
+        width: 200px;
+        height: 200px;
     }
     .ICON .artist {
         font-size: 1rem;
+        transform: translateX(3.5em);
     }
     .name {
         font-size: 2rem;
-        top: 37vh;
-    }
-    .links-container{
-        top: 47vh;
     }
     .links{
         font-size: 2rem;
