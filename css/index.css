@@ -20,7 +20,6 @@
 
 .dark-mode-toggle {
     position: absolute;
-    z-index: 100;
     top: 1em;
     right: 1em;
     color: var(--primary-color);
@@ -52,19 +51,15 @@ body{
     transition: background 0.5s ease-in-out;
 }
 
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-
 .ICON {
     margin-top: 2rem;
     text-align: center;
-    z-index: 100;
+    overflow: hidden;
+}
+
+.ICON img {
+    width: 400px;
+    height: 400px;
 }
 
 .ICON .artist{
@@ -88,25 +83,19 @@ body{
     color: var(--primary-color);
     text-align: center;
     width: 100%;
-    z-index: 100;
-    overflow: hidden;
     margin-block: 1rem;
     font-size: 3rem;
     font-weight: 600;
 }
 
 .links-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+    margin-inline: auto;
+    padding: 1rem;
+    width: 50%;
+}
 
-    width: 100%;
-
-    text-align: center;
-    z-index: 90;
+.links-container p {
+    margin-top: 1rem
 }
 
 iconify-icon {
@@ -115,12 +104,10 @@ iconify-icon {
 
 .links{
     display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+    flex-flow: row wrap;
     align-items: center;
-    flex-basis: 50%;
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 1rem;
     font-size: 3rem;
 }
 
@@ -128,8 +115,8 @@ iconify-icon {
     margin-bottom: 1rem;
 }
 
-.links a{
-    font-size: 1em;
+.links a, .links button{
+    font-size: 0.9em;
     padding: 0.5em;
     text-align: center;
 
@@ -137,10 +124,12 @@ iconify-icon {
     border-radius: 30px;
     backdrop-filter: blur(5px);
     transition: all 0.5s ease;
+    border: solid 1px var(--secondary-color);
+    box-shadow: 1px 5px var(--secondary-color);
 }
 
-.links a:where(:hover, :focus){
-    font-size: 1.25em;
+.links a:where(:hover, :focus), .links button:where(:hover, :focus){
+    font-size: 1.1em;
     padding: 0.55em;
     text-align: center;
 
@@ -149,20 +138,36 @@ iconify-icon {
     backdrop-filter: blur(10px);
 }
 
-@media screen and (max-width: 500px) {
+#COPY_text {
+    font-size: 2rem;
+    color: var(--primary-color);
+    opacity: 0;
+    transition: all 1.5s ease;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
     .ICON img {
-        width: 200px;
-        height: 200px;
+        width: 175px;
+        height: 175px;
     }
     .ICON .artist {
         font-size: 1rem;
         transform: translateX(3.5em);
     }
     .name {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .links{
+        justify-content: center;
         font-size: 2rem;
         gap: 2rem;
+    }
+    .links a:where(:hover, :focus), .links button:where(:hover, :focus){
+        font-size: 1em;
+        padding: 0.4em;
+    }
+    #COPY_text {
+        font-size: 1.25rem;
     }
 }

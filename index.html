@@ -34,21 +34,21 @@
 </head>
 <body>
 
-<div class="content">
-    <div class="ICON" >
-        <img src="AVATAR.svg" />
-        <p class="artist">🎨 <a href="https://vk.com/yoshi_ruko" target="_blank">YØSHI</a></p>
-    </div>
-    <h1 class="name">Kentai Radiquum</h1>
-    <div class="links-container">
-        <div class="links">
-            <a class="link" href="https://furaffinity.net/user/Radiquum" target="_blank"><iconify-icon icon="cib:fur-affinity" style="color: orange;"></iconify-icon></a>
-            <a class="link" href="https://t.me/Radiquum" target="_blank"><iconify-icon icon="cib:telegram" style="color: #2aaaec;"></iconify-icon></a>
-            <a class="link" href="https://vk.com/Radiquum" target="_blank"><iconify-icon icon="cib:vk" style="color: #0077ff;"></iconify-icon></a>
-            <a class="link" href="https://github.com/Radiquum" target="_blank"><iconify-icon icon="cib:github" style="color: #161b22;"></iconify-icon></a>
-            <a class="link" href="https://osu.ppy.sh/users/10954997" target="_blank"><iconify-icon icon="simple-icons:osu" style="color: #e55f9b;"></iconify-icon></a>
-        </div>
-    </div>
+<div class="ICON" >
+    <img src="AVATAR.svg" alt=""/>
+    <p class="artist">🎨 <a href="https://vk.com/yoshi_ruko" target="_blank">YØSHI</a></p>
+</div>
+<h1 class="name">Kentai Radiquum</h1>
+<div class="links-container">
+  <div class="links">
+    <a href="https://furaffinity.net/user/Radiquum" target="_blank"><iconify-icon icon="cib:fur-affinity" style="color: orange;"></iconify-icon></a>
+    <a href="https://t.me/Radiquum" target="_blank"><iconify-icon icon="cib:telegram" style="color: #2aaaec;"></iconify-icon></a>
+    <a href="https://vk.com/Radiquum" target="_blank"><iconify-icon icon="cib:vk" style="color: #0077ff;"></iconify-icon></a>
+    <button id="DC_button" onclick="DC_copy()"><iconify-icon icon="akar-icons:discord-fill" style="color: #5662f6;"></iconify-icon></button>
+    <a href="https://github.com/Radiquum" target="_blank"><iconify-icon icon="cib:github" style="color: #161b22;"></iconify-icon></a>
+    <a href="https://osu.ppy.sh/users/10954997" target="_blank"><iconify-icon icon="simple-icons:osu" style="color: #e55f9b;"></iconify-icon></a>
+  </div>
+  <p id="COPY_text">Copied!</p>
 </div>
 <div class="bg" >
         <ul class="circles">
@@ -72,5 +72,6 @@
 
 </body>
 <script src="darkmode.js"></script>
+<script src="copy.js"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 </html>
