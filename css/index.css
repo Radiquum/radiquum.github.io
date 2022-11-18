@@ -28,16 +28,15 @@
     background: transparent;
     cursor: pointer;
     border-radius: 5px;
-    width: 30px;
-    height: 30px;
+    width: 2rem;
+    height: 2rem;
 }
 
-#light, #dark {
+#sun, #moon {
+    display: inherit;
+    position: inherit;
+    top: 0.25rem;
     font-size: 1.2rem;
-}
-
-.disable {
-    display: none;
 }
 
 *{
@@ -83,36 +82,29 @@ body{
     color: var(--primary-color);
     text-align: center;
     width: 100%;
-    margin-block: 1rem;
+    margin-block: 0.5rem;
     font-size: 3rem;
     font-weight: 600;
 }
 
 .links-container {
     margin-inline: auto;
-    padding: 1rem;
     width: 50%;
-}
-
-.links-container p {
-    margin-top: 1rem
+    margin-bottom: 1rem;
 }
 
 iconify-icon {
     display: block;
 }
 
-.links{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 3rem;
-}
 
-.links:last-child {
-    margin-bottom: 1rem;
+.links{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1.5em, 1fr));
+
+    gap: 2rem;
+    font-size: 4rem;
+    place-items: center;
 }
 
 .links a, .links button{
@@ -130,8 +122,7 @@ iconify-icon {
 
 .links a:where(:hover, :focus), .links button:where(:hover, :focus){
     font-size: 1.1em;
-    padding: 0.55em;
-    text-align: center;
+    padding: 0.5em;
 
     background-color: var(--links-background-color-active);
     border-radius: 30px;
@@ -155,17 +146,11 @@ iconify-icon {
         font-size: 1rem;
         transform: translateX(3.5em);
     }
+    .links {
+        font-size: 3rem;
+    }
     .name {
-        font-size: 1.5rem;
-    }
-    .links{
-        justify-content: center;
-        font-size: 2rem;
-        gap: 2rem;
-    }
-    .links a:where(:hover, :focus), .links button:where(:hover, :focus){
-        font-size: 1em;
-        padding: 0.4em;
+        font-size: 1.75rem;
     }
     #COPY_text {
         font-size: 1.25rem;
