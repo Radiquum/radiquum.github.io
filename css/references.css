@@ -1,0 +1,74 @@
+body {
+    overflow-x: hidden;
+}
+
+.image-wrapper {
+    display: flex;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+:root{
+    --img-width: 90%; /* Fallback incase the browser doesn't support */
+    --img-width: calc(100% - 64px); /* This will calculate the 100% viewport height minus 50px */
+    --img-scale: 1
+}
+
+.image img {
+    width: var(--img-width);
+    max-width: 900px;
+    scale: var(--img-scale);
+    aspect-ratio: 16 / 10;
+    transition: ease all .5s;
+    border: solid 1px var(--secondary-color);
+    box-shadow: 1px 5px var(--secondary-color);
+    border-radius: 25px;
+}
+
+.image a {
+    position: absolute;
+    width: var(--img-width);
+    max-width: 900px;
+    scale: var(--img-scale);
+    aspect-ratio: 16 / 10;
+    background-color: #fff;
+    opacity: 0;
+    filter: alpha(opacity=1);
+}
+
+.image p {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-top: 3rem;
+    scale: var(--img-scale);
+    transition: ease all .5s;
+}
+
+.image:where(:hover, :focus) > *{
+    --img-scale: 1.1
+}
+
+.back {
+    display: block;
+    color: var(--primary-color-unhover);
+    text-decoration: none;
+    font-size: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+    width: 100%;
+    transition: ease all .5s;
+}
+
+.back:where(:hover, :focus) {
+    color: var(--primary-color);
+}
