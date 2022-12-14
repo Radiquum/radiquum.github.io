@@ -21,12 +21,12 @@ body{
 }
 
 .darkmode {
-    --primary-color: #d893ac;
+    --primary-color: #fff;
     --primary-color-unhover: rgba(254, 199, 219, 0.76);
     --links-background-color-unactive: rgba(121, 121, 121, 0.1);
     --links-background-color-active: rgba(121, 121, 121, 0.5);
     --secondary-color: rgba(131, 165, 199, 0.5);
-    --bg-color: #494949;
+    --bg-color: #202124;
 }
 
 .dark-mode-toggle {

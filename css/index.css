@@ -2,18 +2,19 @@
     margin-top: 2rem;
     text-align: center;
     overflow: hidden;
+    font-size: 1.25rem;
 }
 
 .ICON img {
-    width: 400px;
-    height: 400px;
+    display: block;
+    margin: 0 auto;
+    width: clamp(128px, 75%, 512px);
 }
 
 .ICON .artist{
     rotate: -30deg;
     color: var(--primary-color-unhover);
-    font-size: 1.75em;
-    transform: translateX(5em);
+    transform: translateX(clamp(1em, 100%, 4em));
 }
 
 .ICON .artist a, a:visited{
@@ -30,28 +31,26 @@
     color: var(--primary-color);
     text-align: center;
     width: 100%;
-    margin-block: 0.5rem;
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 4rem);
     font-weight: 600;
 }
 
-.links-container {
+.links-container{
+    width: 60%;
     margin-inline: auto;
-    width: 50%;
-    margin-bottom: 1rem;
+    margin-block: 2rem;
 }
 
-iconify-icon {
-    display: block;
-}
-
-.links{
+.links {
+    text-align: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(1.5em, 1fr));
-
     gap: 2rem;
     font-size: 4rem;
     place-items: center;
+}
+iconify-icon {
+    display: block;
 }
 
 .links a, .links button{
@@ -61,19 +60,17 @@ iconify-icon {
 
     background-color: var(--links-background-color-unactive);
     border-radius: 30px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
     transition: all 0.5s ease;
+    transform-origin: bottom;
     border: solid 1px var(--secondary-color);
     box-shadow: 1px 5px var(--secondary-color);
 }
 
 .links a:where(:hover, :focus), .links button:where(:hover, :focus){
-    font-size: 1.1em;
-    padding: 0.5em;
-
     background-color: var(--links-background-color-active);
     border-radius: 30px;
-    backdrop-filter: blur(10px);
+    scale: 1.2;
 }
 
 #COPY_text {
@@ -82,24 +79,8 @@ iconify-icon {
     opacity: 0;
     transition: all 1.5s ease;
     text-align: center;
-}
+} 
 
-@media screen and (max-width: 700px) {
-    .ICON img {
-        width: 175px;
-        height: 175px;
-    }
-    .ICON .artist {
-        font-size: 1rem;
-        transform: translateX(3.5em);
-    }
-    .links {
-        font-size: 3rem;
-    }
-    .name {
-        font-size: 1.75rem;
-    }
-    #COPY_text {
-        font-size: 1.25rem;
-    }
+body.darkmode .links iconify-icon{
+    color: #ffffff !important;
 }

@@ -1,63 +1,57 @@
-body {
-    overflow-x: hidden;
+:root {
+    --image-scale: 1;
 }
 
 .image-wrapper {
-    display: flex;
-    margin: 2rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50vh, 1fr));
+    justify-items: center;
+    margin-block: 2rem;
 }
 
 .image {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    flex-wrap: nowrap;
     align-items: center;
-}
-
-:root{
-    --img-width: 90%; /* Fallback incase the browser doesn't support */
-    --img-width: calc(100% - 64px); /* This will calculate the 100% viewport height minus 50px */
-    --img-scale: 1
+    gap: 2rem;
+    font-size: 4rem;
+    position: relative;
+    margin-block: 2rem;
+    width: clamp(128px, 75%, 1024px);
+    
 }
 
 .image img {
-    width: var(--img-width);
-    max-width: 900px;
+    width: clamp(128px, 75%, 1024px);
     scale: var(--img-scale);
     aspect-ratio: 16 / 10;
     transition: ease all .5s;
     border: solid 1px var(--secondary-color);
     box-shadow: 1px 5px var(--secondary-color);
     border-radius: 25px;
+    transform-origin: bottom;
 }
-
 .image a {
     position: absolute;
-    width: var(--img-width);
-    max-width: 900px;
+    width: clamp(128px, 75%, 1024px);
     scale: var(--img-scale);
     aspect-ratio: 16 / 10;
     background-color: #fff;
     opacity: 0;
     filter: alpha(opacity=1);
 }
-
 .image p {
     color: var(--primary-color);
-    font-size: 2rem;
-    margin-top: 3rem;
+    font-size: clamp(2rem, 4vw, 4rem);
     scale: var(--img-scale);
     transition: ease all .5s;
+    transform-origin: bottom;
 }
-
 .image:where(:hover, :focus) > *{
     --img-scale: 1.1
 }
-
 .back {
     display: block;
     color: var(--primary-color-unhover);
@@ -71,4 +65,4 @@ body {
 
 .back:where(:hover, :focus) {
     color: var(--primary-color);
-}
+} 
