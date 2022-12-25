@@ -91,7 +91,9 @@
 }
 
 .LastFM {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
     align-items: center;
     justify-content: center;
     
@@ -103,7 +105,7 @@
 
 .LastFM iconify-icon::after {
     content: " ";
-    width: 2.2rem;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -111,14 +113,18 @@
     z-index: -1;
     background-color: var(--secondary-color);
     opacity: .25;
+    transition: all 0.5s;
+    border-radius: 0 3px 3px 0;
 }
 
 .LastFM iconify-icon {
+    grid-column: 1;
     margin-inline: .3rem;
     display: inline-block;
 }
 
-.LastFM a {
+.LastFM a, .LastFM img {
+    grid-column: 2;
     text-decoration: none;
 }
 
@@ -127,18 +133,9 @@
     .LastFM {
         left: .5rem;
         top: .5rem;
-    }
-
-    .LastFM span::after {
-        width: 1.5rem;
-    }
-    
-    .LastFM span {
-        font-size: 16px;
-    }
-    
-    .LastFM img{
-        width: 50%;
+        transform-origin: left;
+        scale: .55;
+        width: max-content;
     }
 
 }
