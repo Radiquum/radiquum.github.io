@@ -30,7 +30,7 @@ body{
 }
 
 .dark-mode-toggle {
-    position: absolute;
+    position: fixed;
     top: 1em;
     right: 1em;
     color: var(--primary-color);
@@ -45,7 +45,15 @@ body{
 
 #sun, #moon {
     display: inherit;
-    position: inherit;
+    position: absolute;
     top: 0.25rem;
     font-size: 1.2rem;
+}
+
+body.darkmode iconify-icon{
+    color: #ffffff !important;
+}
+
+iconify-icon {
+    display: block;
 }

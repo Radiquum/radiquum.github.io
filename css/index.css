@@ -49,9 +49,6 @@
     font-size: 4rem;
     place-items: center;
 }
-iconify-icon {
-    display: block;
-}
 
 .links a, .links button{
     font-size: 0.9em;
@@ -81,10 +78,6 @@ iconify-icon {
     text-align: center;
 } 
 
-body.darkmode .links iconify-icon{
-    color: #ffffff !important;
-}
-
 .LastFM::before {
     content: " ";
     width: .2rem;
@@ -94,21 +87,23 @@ body.darkmode .links iconify-icon{
     left: 0;
     z-index: -1;
     background-color: var(--secondary-color);
+    transition: all 0.5s;
 }
 
 .LastFM {
-    margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    
     position: fixed;
     left: 1rem;
     top: 1rem;
+    transition: all 0.5s;
 }
 
-.LastFM span::after {
+.LastFM iconify-icon::after {
     content: " ";
-    width: 2.8rem;
+    width: 2.2rem;
     height: 100%;
     position: absolute;
     top: 0;
@@ -118,20 +113,13 @@ body.darkmode .links iconify-icon{
     opacity: .25;
 }
 
-.LastFM span {
-    color: white;
-    text-decoration: none;
-    font-size: 32px;
-    margin-left: .2rem;
-
+.LastFM iconify-icon {
+    margin-inline: .3rem;
+    display: inline-block;
 }
 
 .LastFM a {
-    color: transparent;
-}
-
-.LastFM img{
-    margin-left: .5rem;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 512px) {
