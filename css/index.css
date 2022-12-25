@@ -84,3 +84,73 @@ iconify-icon {
 body.darkmode .links iconify-icon{
     color: #ffffff !important;
 }
+
+.LastFM::before {
+    content: " ";
+    width: .2rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--secondary-color);
+}
+
+.LastFM {
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+}
+
+.LastFM span::after {
+    content: " ";
+    width: 2.8rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: .2rem;
+    z-index: -1;
+    background-color: var(--secondary-color);
+    opacity: .25;
+}
+
+.LastFM span {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    margin-left: .2rem;
+
+}
+
+.LastFM a {
+    color: transparent;
+}
+
+.LastFM img{
+    margin-left: .5rem;
+}
+
+@media screen and (max-width: 512px) {
+
+    .LastFM {
+        left: .5rem;
+        top: .5rem;
+    }
+
+    .LastFM span::after {
+        width: 1.5rem;
+    }
+    
+    .LastFM span {
+        font-size: 16px;
+    }
+    
+    .LastFM img{
+        width: 50%;
+    }
+
+}
