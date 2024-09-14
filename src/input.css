@@ -29,3 +29,38 @@ body {
 .bio {
     font-family: 'Fira Mono', monospace;
 }
+
+#track-name::after {
+    content: '';
+    display: inline-block;
+    margin-left: 4px;
+    width: 8px;
+    height: 24px;
+    background-color: var(--cursor-color, transparent);
+    -webkit-animation: var(--cursor-animation, none) 1s infinite;
+            animation: var(--cursor-animation, none) 1s infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
