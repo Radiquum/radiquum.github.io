@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,17 @@
     <link href="./static/tailwind.css" rel="stylesheet">
 </head>
 <body class="overflow-x-hidden bg-bg-black">
-    <div class="h-screen">
+    <header class="fixed top-0 left-0 right-0 z-10 w-full text-white opacity-[var(--header-opacity,0)] bg-bg-pink" id="header">
+        <div class="container mx-auto">
+            <a href="#section_landing">
+                <div class="flex items-center gap-4 px-4 py-4">
+                    <img src="./static/avatar_512.png" alt="" class="w-[64px] lg:w-[64px] 2xl:w-[64px]"/>
+                    <h1 class="text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">KENTAI RADIQUUM</h1>
+                </div>
+            </a>
+        </div>
+    </header>
+    <div class="h-screen" id="section_landing">
         <div class="container mx-auto text-white h-full max-h-[60vh] relative">
             <div class="bg-bg-pink w-full h-full max-h-[60vh] max-w-[45.25%] absolute top-0 right-0 -z-10"></div>
             <div class="flex items-center justify-center gap-12 px-8 py-8">
@@ -36,10 +46,13 @@
                 </div>
             </div>
             <div class="flex items-end justify-end w-full max-w-[45%] gap-4 p-8 font-medium text-4xl mb-[3%]">
-                <a class="w-[320px] h-[75px] flex items-end justify-end pr-2 pb-2 bg-bg-blue hover:bg-opacity-85 transition-colors" href="#">READ MORE</a>
+                <a class="w-[320px] h-[75px] flex items-end justify-end pr-2 pb-2 bg-bg-blue hover:bg-opacity-85 transition-colors" href="#section_about">READ MORE</a>
                 <a class="w-[300px] h-[75px] flex items-end justify-end pr-2 pb-2 bg-bg-blue hover:bg-opacity-85 transition-colors" href="#">LINKS</a>
             </div>
         </div>
+    </div>
+    <div class="h-screen" id="section_about">
+        
     </div>
     <script src="./static/script.js"></script>
 </body>
