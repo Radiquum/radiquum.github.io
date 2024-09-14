@@ -38,16 +38,16 @@ window.onscroll = () => {
   let scrollPosition = getScrollPosition()
   console.log(last_Y_pos, window.scrollY, scrollPosition, header_opacity)
 
-  if (scrollPosition < 20) {
+  if (scrollPosition < 1) {
     header.style.display = "none"
   } else {
     header.style.display = "block"
   }
 
 
-  if ((window.scrollY > last_Y_pos) && (scrollPosition > 40)) {
+  if ((window.scrollY > last_Y_pos) && (scrollPosition > 1)) {
     header_opacity += 0.1
-  } else if ((window.scrollY < last_Y_pos) && (scrollPosition < 40)) (
+  } else if ((window.scrollY < last_Y_pos) && (scrollPosition < 1)) (
     header_opacity -= 0.1
   )
   last_Y_pos = window.scrollY
