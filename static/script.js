@@ -3,14 +3,18 @@ function sleep(time) {
 }
 
 const SYMBOL_DELAY = 150;
+let DELETE_INTERVAL = null;
+let UPDATE_INTERVAL = null;
 
 function deletePreviousTrack(newTrackName) {
   const trackName = document.getElementById("track-name");
   const prevTrackNameLen = trackName.innerHTML.length;
   trackName.style.setProperty("--cursor-animation", "none");
+  clearInterval(DELETE_INTERVAL);
+  clearInterval(UPDATE_INTERVAL);
 
   let removed = 0;
-  const interval = setInterval(() => {
+  DELETE_INTERVAL = setInterval(() => {
     removed += 1;
     trackName.innerHTML = trackName.innerHTML.substring(
       0,
@@ -18,7 +22,7 @@ function deletePreviousTrack(newTrackName) {
     );
 
     if (removed == prevTrackNameLen - 1) {
-      clearInterval(interval);
+      clearInterval(DELETE_INTERVAL);
       updateTrack(newTrackName);
       return true;
     }
@@ -28,9 +32,11 @@ function deletePreviousTrack(newTrackName) {
 function updateTrack(newTrackName) {
   const trackName = document.getElementById("track-name");
   const TrackNameLen = newTrackName.length;
+  clearInterval(DELETE_INTERVAL);
+  clearInterval(UPDATE_INTERVAL);
 
   let added = 0;
-  const interval = setInterval(() => {
+  UPDATE_INTERVAL = setInterval(() => {
     if (added < TrackNameLen) {
       trackName.innerHTML += newTrackName[added];
       console.log(added, TrackNameLen, newTrackName[added]);
@@ -38,7 +44,7 @@ function updateTrack(newTrackName) {
     }
 
     if (added == TrackNameLen) {
-      clearInterval(interval);
+      clearInterval(UPDATE_INTERVAL);
       setTimeout(() => {
         trackName.innerHTML += '"';
       }, SYMBOL_DELAY);
