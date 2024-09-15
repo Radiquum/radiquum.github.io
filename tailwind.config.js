@@ -9,6 +9,16 @@ module.exports = {
         'bg-black': '#1E1E1E',
         'bg-gray': '#484848'
       },
+      screens: {
+        // 'sm': '640px',
+        // 'md': '768px',
+        // 'lg': '1024px',
+        // 'xl': '1280px',
+        '2xl': '1760px',
+      },
+      container: {
+        center: true,
+      },
     },
   },
   plugins: [],
