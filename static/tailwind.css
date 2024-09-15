@@ -669,6 +669,11 @@ video {
   margin-bottom: 3rem;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -821,6 +826,18 @@ video {
   height: 70;
 }
 
+.h-\[90px\] {
+  height: 90px;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
 .max-h-\[40vh\] {
   max-height: 40vh;
 }
@@ -944,6 +961,14 @@ video {
 
 .w-\[163px\] {
   width: 163px;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .max-w-\[1200px\] {
