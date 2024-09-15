@@ -838,6 +838,14 @@ video {
   height: 2rem;
 }
 
+.h-\[81px\] {
+  height: 81px;
+}
+
+.h-\[82px\] {
+  height: 82px;
+}
+
 .max-h-\[40vh\] {
   max-height: 40vh;
 }
@@ -1203,6 +1211,10 @@ video {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1254,6 +1266,10 @@ video {
 
 .text-\[12px\] {
   font-size: 12px;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
 }
 
 .font-bold {
