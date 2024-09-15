@@ -86,9 +86,19 @@
         <div class="flex flex-wrap gap-8 w-fit">
             <!-- Photo Links -->
             <div class="flex flex-col w-[416px] gap-4">
-                <div class="relative w-[416px] h-[376px] flex justify-end items-end">
-                    <img class="absolute inset-0 object-cover w-full h-full -z-10" alt=""
-                        src="./static/assets/photos_section_image.png" />
+                <div class="relative w-[416px] h-[376px] flex justify-end items-end overflow-hidden" id="photos-image">
+                    <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform duration-[var(--transform-duration,150ms)]" alt=""
+                        src="./static/assets/photo_building.png" data-section-image="photos" data-slide="0" data-photo="photo_building" />
+                    <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform duration-[var(--transform-duration,150ms)]" alt=""
+                        src="./static/assets/photo_dandelion.png" data-section-image="photos" data-slide="1" data-photo="photo_dandelion" />
+                    <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform duration-[var(--transform-duration,150ms)]" alt=""
+                        src="./static/assets/photo_flowers.png" data-section-image="photos" data-slide="2" data-photo="photo_flowers" />
+                    <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform duration-[var(--transform-duration,150ms)]" alt=""
+                        src="./static/assets/photo_plush.png" data-section-image="photos" data-slide="3" data-photo="photo_plush" />
+                    <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform duration-[var(--transform-duration,150ms)]" alt=""
+                        src="./static/assets/photo_tower.png" data-section-image="photos" data-slide="4" data-photo="photo_tower" />
+                    <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform duration-[var(--transform-duration,150ms)]" alt=""
+                        src="./static/assets/photo_trains.png" data-section-image="photos" data-slide="5" data-photo="photo_trains" />
                     <p class="font-bold text-[40px] leading-[1] p-[8px]">PHOTOS</p>
                 </div>
                 <div class="flex flex-wrap gap-4">

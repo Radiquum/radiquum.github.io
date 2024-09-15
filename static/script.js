@@ -1,11 +1,18 @@
-function sleep(time) {
-  return new Promise((resolve) => setTimeout(resolve, time));
-}
-
+// Animation durations in ms
+const SONG_CHANGE_DELAY = 180000;
 const SYMBOL_DELAY = 150;
+
+const IMAGE_CHANGE_DELAY = 6000;
+const IMAGE_ANIMATION_DELAY = 1000;
+const IMAGE_TRANSITION_DELAY = 1000;
+
+// Header percentages
+const HEADER_ACTIVATION_PERCENT = 30;
+const HEADER_DEACTIVATION_PERCENT = 20;
+
+// THIS IS NOT CONSTANTS, BUT A GLOBAL VAR FOR TIMERS IN SONG NAME CHANGE!!!
 let DELETE_INTERVAL = null;
 let UPDATE_INTERVAL = null;
-
 function deletePreviousTrack(newTrackName) {
   const trackName = document.getElementById("track-name");
   const prevTrackNameLen = trackName.innerHTML.length;
@@ -88,20 +95,6 @@ async function updatePlayingTrack() {
     });
 }
 
-window.onload = () => {
-  updatePlayingTrack();
-  setInterval(updatePlayingTrack, 180000);
-};
-
-function getScrollPosition() {
-  const height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  const windowScroll = document.documentElement.scrollTop;
-  const scrolled = (windowScroll / height) * 100;
-  return Math.floor(scrolled);
-}
-
 function getBlockScrollPosition(block_id) {
   const blockHeight = document.getElementById(block_id).clientHeight;
   const fullPageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -118,8 +111,6 @@ function getBlockScrollPosition(block_id) {
 const header = document.getElementById("header");
 let last_Y_pos = 0;
 let header_opacity = 0;
-const HEADER_ACTIVATION_PERCENT = 30;
-const HEADER_DEACTIVATION_PERCENT = 20;
 
 window.onscroll = () => {
   let scrollPosition = getBlockScrollPosition('section_landing');
@@ -142,4 +133,50 @@ window.onscroll = () => {
   }
 
   header.style.setProperty("--header-opacity", `${header_opacity.toFixed(2)}`);
+};
+
+function setPhotoSectionImagesMargin() {
+  const photoSectionImages = document.querySelectorAll("[data-section-image='photos']")
+  for (i = 0; i < photoSectionImages.length; i++) {
+    photoSectionImages[i].style.setProperty("--transform-duration", `${IMAGE_TRANSITION_DELAY}ms`)
+  }
+  for (i = 1; i < photoSectionImages.length; i++) {
+    photoSectionImages[i].style.setProperty("--transform-y", `calc(376px*-${i})`)
+    photoSectionImages[i].style.setProperty("display", `none`)
+  }
+}
+
+function changePhotoSectionImage() {
+  const photoSectionImages = document.querySelectorAll("[data-section-image='photos']")
+  const photoSectionContainer = document.getElementById("photos-image")
+  photoSectionImages[1].style.setProperty("display", `block`)
+
+  setTimeout(() => {
+    photoSectionImages[0].style.setProperty("--transform-y", `376px`)
+    photoSectionImages[1].style.setProperty("--transform-y", `0px`)
+  }, IMAGE_TRANSITION_DELAY / 2)
+
+  setTimeout(() => {
+    photoSectionImages[0].style.setProperty("display", `none`)
+    const backEl = document.querySelector(`[data-section-image='photos'][data-slide='0']`).cloneNode(true)
+    photoSectionContainer.removeChild(document.querySelector(`[data-section-image='photos'][data-slide='0']`))
+    backEl.setAttribute('data-slide', photoSectionImages.length - 1)
+    photoSectionContainer.appendChild(backEl)
+  }, (IMAGE_ANIMATION_DELAY + IMAGE_TRANSITION_DELAY))
+
+  setTimeout(() => {
+    const photoSectionImagesRev = document.querySelectorAll("[data-section-image='photos']")
+    for (i = 1; i < photoSectionImagesRev.length; i++) {
+      const element = document.querySelector(`[data-section-image='photos'][data-slide='${i}']`)
+      element.style.setProperty("--transform-y", `calc(376px*-${Number(element.getAttribute('data-slide')) - 1})`)
+      element.setAttribute('data-slide', Number(element.getAttribute('data-slide')) - 1)
+    }
+  }, (IMAGE_ANIMATION_DELAY + (IMAGE_TRANSITION_DELAY + 500)))
+}
+
+window.onload = () => {
+  updatePlayingTrack();
+  setInterval(updatePlayingTrack, 180000);
+  setPhotoSectionImagesMargin()
+  setInterval(changePhotoSectionImage, IMAGE_CHANGE_DELAY);
 };
