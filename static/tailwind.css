@@ -689,6 +689,10 @@ video {
   aspect-ratio: 342/288;
 }
 
+.aspect-\[1\/1\] {
+  aspect-ratio: 1/1;
+}
+
 .h-\[37px\] {
   height: 37px;
 }
@@ -755,6 +759,10 @@ video {
 
 .h-\[416px\] {
   height: 416px;
+}
+
+.h-\[376px\] {
+  height: 376px;
 }
 
 .max-h-\[40vh\] {
