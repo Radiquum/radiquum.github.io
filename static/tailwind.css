@@ -826,6 +826,14 @@ video {
   scroll-margin-top: 2.5rem;
 }
 
+.scroll-mt-6 {
+  scroll-margin-top: 1.5rem;
+}
+
+.scroll-mt-20 {
+  scroll-margin-top: 5rem;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1011,6 +1019,11 @@ video {
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pb-2 {
