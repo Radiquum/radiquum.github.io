@@ -10,6 +10,7 @@ module.exports = {
         'bg-gray': '#484848'
       },
       screens: {
+        'xm': '360px',
         // 'sm': '640px',
         // 'md': '768px',
         // 'lg': '1024px',
