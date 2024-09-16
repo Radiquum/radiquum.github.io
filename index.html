@@ -49,11 +49,11 @@
                     <p class="ml-4"> About: </p>
                     <p class="ml-8"> - Coder: <span class="text-bg-pink">"NEXT.js, Python"</span> </p>
                     <p class="ml-8"> - Photographer: <a class="text-bg-pink hover:underline"
-                            href="https://wah.su/photos">"wah.su/photos"</a></p>
+                            href="https://wah.su/photos" target="_blank" referrerpolicy="origin">"wah.su/photos"</a></p>
                     <p class="ml-8"> - Self-Hosting Enthusiast: <a class="text-bg-pink hover:underline"
-                            href="https://home.wah.su">"wah.su"</a></p>
+                            href="https://home.wah.su" target="_blank" referrerpolicy="origin">"wah.su"</a></p>
                     <p class="ml-4"> Listen: <a class="text-bg-pink hover:underline"
-                            href="https://last.fm/user/radiquum" id="track-name">"LOADING . . ."</a></p>
+                            href="https://last.fm/user/radiquum" id="track-name" target="_blank" referrerpolicy="origin">"LOADING . . ."</a></p>
                 </div>
             </div>
             <div class="flex items-end justify-end w-full max-w-[45%] gap-4 p-8 font-medium text-4xl mb-[3%]">
@@ -64,21 +64,61 @@
             </div>
         </div>
     </div>
-    <div class="container py-6 text-white scroll-mt-12" id="section_about">
+    <div class="container h-screen py-6 text-white scroll-mt-12" id="section_about">
         <h1 class="mt-16 mb-12 text-6xl font-bold text-center">ABOUT ME</h1>
-        <div class="flex flex-col gap-8 text-2xl font-light max-w-[1200px] mx-auto justify-center">
-            <p>Hi! I'm Kentai Radiquum 🐾, a tech enthusiast with a passion for software development. I love
-                diving into code and exploring new software, though hardware fascinates me too.</p>
-            <p>I’m also getting into photography and excited to share my progress 📸. I will be glad if you
-                will check them out and leave a feedback! </p>
-            <p>One of my biggest loves is red pandas — I can’t get enough of them! I’ve been collecting red
-                panda stickers and sharing them on the Red Panda Stickers Telegram channel. Plus, I’ve curated a
-                collection of over 3000 red panda photos and videos, available at wahs.wah.su.</p>
-            <p>I'm really into self-hosting through my wah.su project, which helps me dive into server
-                management and hosting platforms.</p>
-            <p>I listen a lot of various music, but mainly listen to EDM \ Happy Hardcore \ Tech \ Rock \
-                Alternative.<br />By artist like: S3RL, Camellia, t+pazolite, BTMH, Saint Motel, and more...</p>
-            <p>Feel free to reach out anytime! I will be happy to chat.</p>
+        <div class="flex flex-wrap gap-8 w-fit">
+            <div class="flex flex-col w-[416px]">
+                <div class="relative w-[416px] h-[120px] flex justify-center items-center bg-bg-gray">
+                    <p class="font-bold text-4xl p-[8px]">Tech enthusiast</p>
+                </div>
+                <div class="relative w-[416px] min-h-[196px] p-[16px] flex justify-center bg-bg-gray bg-opacity-50">
+                    <p class="text-2xl font-light">I'm a tech enthusiast with a passion for software development. I love diving into code and exploring new software, though hardware fascinates me too.</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 w-fit">
+                <div class="flex flex-col w-[416px]">
+                    <div class="relative w-[416px] h-[120px] flex justify-center items-center bg-bg-gray">
+                        <p class="font-bold text-4xl p-[8px]">Self-Hosting stuff</p>
+                    </div>
+                    <div class="relative w-[416px] min-h-[196px] p-[16px] flex justify-center bg-bg-gray bg-opacity-50">
+                        <p class="text-2xl font-light">I'm really into self-hosting through my <a class="text-bg-pink hover:underline" href="https://home.wah.su" target="_blank" referrerpolicy="origin">wah.su</a> project, which helps me dive into server management and hosting platforms.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col w-[416px]">
+                    <div class="relative w-[416px] h-[120px] flex justify-center items-center bg-green-500">
+                        <p class="font-bold text-4xl p-[8px]">Photographer</p>
+                    </div>
+                    <div class="relative w-[416px] p-[16px] flex justify-center bg-green-500 bg-opacity-50">
+                        <p class="text-2xl font-light">I’m also getting into <a class="text-bg-pink hover:underline" href="https://wah.su/photos" target="_blank" referrerpolicy="origin">photography</a> and excited to share my progress.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-[416px]">
+                <div class="relative w-[416px] h-[120px] flex justify-center items-center bg-orange-600">
+                    <p class="font-bold text-4xl p-[8px]">Red Pandas admirer</p>
+                </div>
+                <div class="relative w-[416px] min-h-[196px] p-[16px] flex justify-center bg-orange-600 bg-opacity-50">
+                    <p class="text-2xl font-light">One of my biggest loves is red pandas—I can’t get enough of them! I’ve been collecting red panda stickers and sharing them on the <a class="text-bg-pink hover:underline" href="https://wahs.wah.su" target="_blank" referrerpolicy="origin">Red Panda Stickers Telegram channel</a>. Plus, I’ve curated a <a class="text-bg-pink hover:underline" href="https://home.wah.su" target="_blank" referrerpolicy="origin">collection</a> of over 3000 red panda photos and videos.</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 w-fit">
+                <div class="flex flex-col w-[416px]">
+                    <div class="relative w-[416px] h-[120px] flex justify-center items-center bg-bg-pink">
+                        <p class="font-bold text-4xl p-[8px]">Music</p>
+                    </div>
+                    <div class="relative w-[416px] min-h-[196px] p-[16px] flex justify-center bg-bg-pink bg-opacity-50">
+                        <p class="text-2xl font-light">I listen a lot of various music, but mainly listen to EDM \ Happy Hardcore \ Tech \ Rock \ Alternative. By artist like: S3RL, Camellia, t+pazolite, BTMH, Saint Motel, and more...</p>
+                    </div>
+                </div>
+                <div class="flex flex-col w-[416px]">
+                    <div class="relative w-[416px] h-[120px] flex justify-center items-center bg-bg-blue">
+                        <p class="font-bold text-4xl p-[8px]">Contact</p>
+                    </div>
+                    <div class="relative w-[416px] p-[16px] flex justify-center bg-bg-blue bg-opacity-50">
+                        <p class="text-2xl font-light">Feel free to reach out anytime! Ways to contact me via instant messengers are available in <a class="text-bg-pink hover:underline" href="#section_links">links</a> section!</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container py-16 text-white scroll-mt-20" id="section_links">
