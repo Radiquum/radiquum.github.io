@@ -1247,6 +1247,18 @@ body {
     max-height: 40vh;
   }
 
+  .xl\:max-w-\[53\.75\%\] {
+    max-width: 53.75%;
+  }
+
+  .xl\:max-w-\[45\%\] {
+    max-width: 45%;
+  }
+
+  .xl\:flex-col {
+    flex-direction: column;
+  }
+
   .xl\:gap-4 {
     gap: 1rem;
   }
