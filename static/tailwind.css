@@ -1239,6 +1239,14 @@ body {
     margin-top: -248px;
   }
 
+  .xl\:max-h-\[30vh\] {
+    max-height: 30vh;
+  }
+
+  .xl\:max-h-\[40vh\] {
+    max-height: 40vh;
+  }
+
   .xl\:gap-4 {
     gap: 1rem;
   }
@@ -1289,12 +1297,28 @@ body {
     margin-top: -0px;
   }
 
+  .\32xl\:h-screen {
+    height: 100vh;
+  }
+
+  .\32xl\:max-h-\[60vh\] {
+    max-height: 60vh;
+  }
+
   .\32xl\:w-\[512px\] {
     width: 512px;
   }
 
   .\32xl\:w-\[64px\] {
     width: 64px;
+  }
+
+  .\32xl\:w-\[300px\] {
+    width: 300px;
+  }
+
+  .\32xl\:flex-row {
+    flex-direction: row;
   }
 
   .\32xl\:text-4xl {
