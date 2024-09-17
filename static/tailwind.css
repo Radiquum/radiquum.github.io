@@ -686,6 +686,14 @@ video {
   margin-top: 4rem;
 }
 
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -736,6 +744,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-2 {
+  height: 0.5rem;
 }
 
 .max-h-\[4px\] {
@@ -797,6 +809,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-2 {
+  width: 0.5rem;
 }
 
 .max-w-\[46\.25\%\] {
@@ -870,6 +886,10 @@ video {
 
 .scroll-smooth {
   scroll-behavior: smooth;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .border {
@@ -987,6 +1007,10 @@ video {
 
 .p-\[8px\] {
   padding: 8px;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .px-2 {
@@ -1153,10 +1177,6 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
 .\[filter\:darken\(10\%\)\] {
   filter: darken(10%);
 }
@@ -1242,6 +1262,10 @@ body {
 
   .sm\:block {
     display: block;
+  }
+
+  .sm\:inline {
+    display: inline;
   }
 
   .sm\:h-10 {
@@ -1397,8 +1421,16 @@ body {
     margin-top: 6rem;
   }
 
-  .md\:h-screen {
-    height: 100vh;
+  .md\:inline {
+    display: inline;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:w-auto {
+    width: auto;
   }
 
   .md\:scroll-mt-20 {
@@ -1415,10 +1447,6 @@ body {
     margin-top: -248px;
   }
 
-  .xl\:h-screen {
-    height: 100vh;
-  }
-
   .xl\:max-h-\[40vh\] {
     max-height: 40vh;
   }
@@ -1433,6 +1461,10 @@ body {
 
   .xl\:flex-col {
     flex-direction: column;
+  }
+
+  .xl\:justify-center {
+    justify-content: center;
   }
 
   .xl\:text-2xl {
@@ -1457,42 +1489,8 @@ body {
 }
 
 @media (min-width: 1024px) {
-  @media (min-width: 1000px) {
-    .lg\:xl\:max-h-\[40vh\] {
-      max-height: 40vh;
-    }
-  }
-
-  .lg\:h-screen {
-    height: 100vh;
-  }
-
-  .lg\:max-h-\[40vh\] {
-    max-height: 40vh;
-  }
-
-  .lg\:max-h-\[50vh\] {
-    max-height: 50vh;
-  }
-
-  .lg\:max-h-\[50\%\] {
-    max-height: 50%;
-  }
-
-  .lg\:max-h-\[40\%\] {
-    max-height: 40%;
-  }
-
-  .lg\:max-h-\[45\%\] {
-    max-height: 45%;
-  }
-
   .lg\:max-h-\[45vh\] {
     max-height: 45vh;
-  }
-
-  .lg\:max-h-\[30vh\] {
-    max-height: 30vh;
   }
 
   .lg\:w-\[372px\] {
@@ -1507,6 +1505,10 @@ body {
     gap: 1rem;
   }
 
+  .lg\:p-4 {
+    padding: 1rem;
+  }
+
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1515,6 +1517,11 @@ body {
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -1545,6 +1552,10 @@ body {
 
   .\32xl\:flex-row {
     flex-direction: row;
+  }
+
+  .\32xl\:justify-center {
+    justify-content: center;
   }
 
   .\32xl\:text-4xl {
