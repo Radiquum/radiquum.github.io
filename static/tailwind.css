@@ -1521,6 +1521,10 @@ body {
   .md\:w-auto {
     width: auto;
   }
+
+  .md\:gap-8 {
+    gap: 2rem;
+  }
 }
 
 @media (min-width: 1000px) {
