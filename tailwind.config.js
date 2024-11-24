@@ -5,9 +5,9 @@ module.exports = {
     extend: {
       colors: {
         "bg-pink": "#FF478B",
-        "bg-blue": "#298FF5",
-        "bg-black": "#202020",
-        "bg-gray": "#292929",
+        "bg-blue": "#92cff5",
+        "bg-black": "#121b2c",
+        "bg-gray": "#262626",
       },
       screens: {
         xs: "370px",
