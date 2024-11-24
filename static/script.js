@@ -7,8 +7,7 @@ const IMAGE_ANIMATION_DELAY = 1000;
 const IMAGE_TRANSITION_DELAY = 1000;
 
 // Header percentages
-const HEADER_ACTIVATION_PERCENT = 0.4;
-const HEADER_DEACTIVATION_PERCENT = 0.8;
+const HEADER_ACTIVATION_PERCENT = 0.8;
 
 // THIS IS NOT CONSTANTS, BUT A GLOBAL VAR FOR TIMERS IN SONG NAME CHANGE!!!
 let DELETE_INTERVAL = null;
@@ -92,77 +91,87 @@ async function updatePlayingTrack() {
 }
 
 const header = document.getElementById("header");
-let last_Y_pos = 0;
-let header_opacity = 0;
+const landingBlock = document.getElementById("landing");
 
 window.onscroll = () => {
-  let landingBlock = document.getElementById("landing").clientHeight;
+  const current_Y_pos = window.scrollY;
 
-  if (window.scrollY < (landingBlock * HEADER_ACTIVATION_PERCENT)) {
-    header.style.display = "none";
+  if (
+    current_Y_pos >
+    Math.floor(landingBlock.clientHeight * HEADER_ACTIVATION_PERCENT)
+  ) {
+    header.style.setProperty("--tw-translate-y", "0%");
   } else {
-    header.style.display = "block";
+    header.style.setProperty("--tw-translate-y", "-100%");
   }
-
-  if (window.scrollY > last_Y_pos && window.scrollY > (landingBlock * HEADER_ACTIVATION_PERCENT)) {
-    header_opacity += 0.1;
-  } else if (window.scrollY < last_Y_pos && window.scrollY < (landingBlock * HEADER_DEACTIVATION_PERCENT)) {
-    header_opacity -= 0.1;
-  }
-
-  if (header_opacity > 1) {
-    header_opacity = 1;
-  } else if (header_opacity < 0) {
-    header_opacity = 0;
-  }
-
-  last_Y_pos = window.scrollY;
-
-  header.style.setProperty("--header-opacity", `${header_opacity.toFixed(2)}`);
 };
 
 function setPhotoSectionImagesMargin() {
-  const photoSectionImages = document.querySelectorAll("[data-section-image='photos']")
+  const photoSectionImages = document.querySelectorAll(
+    "[data-section-image='photos']"
+  );
   for (i = 0; i < photoSectionImages.length; i++) {
-    photoSectionImages[i].style.setProperty("--transform-duration", `${IMAGE_TRANSITION_DELAY}ms`)
+    photoSectionImages[i].style.setProperty(
+      "--transform-duration",
+      `${IMAGE_TRANSITION_DELAY}ms`
+    );
   }
   for (i = 1; i < photoSectionImages.length; i++) {
-    photoSectionImages[i].style.setProperty("--transform-y", `calc(376px*-${i})`)
-    photoSectionImages[i].style.setProperty("display", `none`)
+    photoSectionImages[i].style.setProperty(
+      "--transform-y",
+      `calc(376px*-${i})`
+    );
+    photoSectionImages[i].style.setProperty("display", `none`);
   }
 }
 
 function changePhotoSectionImage() {
-  const photoSectionImages = document.querySelectorAll("[data-section-image='photos']")
-  const photoSectionContainer = document.getElementById("photos-image")
-  photoSectionImages[1].style.setProperty("display", `block`)
+  const photoSectionImages = document.querySelectorAll(
+    "[data-section-image='photos']"
+  );
+  const photoSectionContainer = document.getElementById("photos-image");
+  photoSectionImages[1].style.setProperty("display", `block`);
 
   setTimeout(() => {
-    photoSectionImages[0].style.setProperty("--transform-y", `376px`)
-    photoSectionImages[1].style.setProperty("--transform-y", `0px`)
-  }, IMAGE_TRANSITION_DELAY / 2)
+    photoSectionImages[0].style.setProperty("--transform-y", `376px`);
+    photoSectionImages[1].style.setProperty("--transform-y", `0px`);
+  }, IMAGE_TRANSITION_DELAY / 2);
 
   setTimeout(() => {
-    photoSectionImages[0].style.setProperty("display", `none`)
-    const backEl = document.querySelector(`[data-section-image='photos'][data-slide='0']`).cloneNode(true)
-    photoSectionContainer.removeChild(document.querySelector(`[data-section-image='photos'][data-slide='0']`))
-    backEl.setAttribute('data-slide', photoSectionImages.length - 1)
-    photoSectionContainer.appendChild(backEl)
-  }, (IMAGE_ANIMATION_DELAY + IMAGE_TRANSITION_DELAY))
+    photoSectionImages[0].style.setProperty("display", `none`);
+    const backEl = document
+      .querySelector(`[data-section-image='photos'][data-slide='0']`)
+      .cloneNode(true);
+    photoSectionContainer.removeChild(
+      document.querySelector(`[data-section-image='photos'][data-slide='0']`)
+    );
+    backEl.setAttribute("data-slide", photoSectionImages.length - 1);
+    photoSectionContainer.appendChild(backEl);
+  }, IMAGE_ANIMATION_DELAY + IMAGE_TRANSITION_DELAY);
 
   setTimeout(() => {
-    const photoSectionImagesRev = document.querySelectorAll("[data-section-image='photos']")
+    const photoSectionImagesRev = document.querySelectorAll(
+      "[data-section-image='photos']"
+    );
     for (i = 1; i < photoSectionImagesRev.length; i++) {
-      const element = document.querySelector(`[data-section-image='photos'][data-slide='${i}']`)
-      element.style.setProperty("--transform-y", `calc(376px*-${Number(element.getAttribute('data-slide')) - 1})`)
-      element.setAttribute('data-slide', Number(element.getAttribute('data-slide')) - 1)
+      const element = document.querySelector(
+        `[data-section-image='photos'][data-slide='${i}']`
+      );
+      element.style.setProperty(
+        "--transform-y",
+        `calc(376px*-${Number(element.getAttribute("data-slide")) - 1})`
+      );
+      element.setAttribute(
+        "data-slide",
+        Number(element.getAttribute("data-slide")) - 1
+      );
     }
-  }, (IMAGE_ANIMATION_DELAY + (IMAGE_TRANSITION_DELAY + 500)))
+  }, IMAGE_ANIMATION_DELAY + (IMAGE_TRANSITION_DELAY + 500));
 }
 
 window.onload = () => {
   updatePlayingTrack();
   setInterval(updatePlayingTrack, 180000);
-  setPhotoSectionImagesMargin()
+  setPhotoSectionImagesMargin();
   setInterval(changePhotoSectionImage, IMAGE_CHANGE_DELAY);
 };
