@@ -28,7 +28,7 @@ function deletePreviousTrack(newTrackName) {
       prevTrackNameLen - removed
     );
 
-    if (removed == prevTrackNameLen - 1) {
+    if (removed == prevTrackNameLen) {
       clearInterval(DELETE_INTERVAL);
       updateTrack(newTrackName);
       return true;
@@ -51,9 +51,6 @@ function updateTrack(newTrackName) {
 
     if (added == TrackNameLen) {
       clearInterval(UPDATE_INTERVAL);
-      setTimeout(() => {
-        trackName.innerHTML += '"';
-      }, SYMBOL_DELAY);
       trackName.style.setProperty("--cursor-animation", "blink");
       setTimeout(() => {
         trackName.style.setProperty("--cursor-color", "transparent");
@@ -66,7 +63,6 @@ function updateTrack(newTrackName) {
 async function updatePlayingTrack() {
   const trackName = document.getElementById("track-name");
   const prevTrackName = trackName.innerHTML;
-  const prevTrackNameLen = trackName.innerHTML.length;
 
   fetch("https://lastfm-last-played.biancarosa.com.br/radiquum/latest-song")
     .then((res) => {
@@ -77,7 +73,7 @@ async function updatePlayingTrack() {
     })
     .then((data) => {
       if (
-        prevTrackName != `"${data.track.artist["#text"]} - ${data.track.name}"`
+        prevTrackName != `${data.track.artist["#text"]} - ${data.track.name}`
       ) {
         trackName.style.setProperty("--cursor-color", "#fff");
         trackName.style.setProperty("--cursor-animation", "blink");
@@ -100,7 +96,7 @@ let last_Y_pos = 0;
 let header_opacity = 0;
 
 window.onscroll = () => {
-  let landingBlock = document.getElementById("section_landing").clientHeight;
+  let landingBlock = document.getElementById("landing").clientHeight;
 
   if (window.scrollY < (landingBlock * HEADER_ACTIVATION_PERCENT)) {
     header.style.display = "none";

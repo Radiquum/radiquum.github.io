@@ -4,23 +4,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'bg-pink': '#FF478B',
-        'bg-blue': '#298FF5',
-        'bg-black': '#1E1E1E',
-        'bg-gray': '#484848'
+        "bg-pink": "#FF478B",
+        "bg-blue": "#298FF5",
+        "bg-black": "#202020",
+        "bg-gray": "#292929",
       },
       screens: {
-        'xm': '360px',
-        // 'sm': '640px',
-        // 'md': '768px',
-        // 'lg': '1024px',
-        'xl': '1000px',
-        '2xl': '1800px',
+        xs: "370px",
       },
       container: {
         center: true,
       },
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fill, minmax(300px, 1fr))",
+      },
     },
   },
   plugins: [],
-}
+};
