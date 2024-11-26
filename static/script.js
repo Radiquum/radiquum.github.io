@@ -119,7 +119,7 @@ function setPhotoSectionImagesMargin() {
   for (i = 1; i < photoSectionImages.length; i++) {
     photoSectionImages[i].style.setProperty(
       "--transform-y",
-      `calc(376px*-${i})`
+      `calc(372px*-${i})`
     );
     photoSectionImages[i].style.setProperty("display", `none`);
   }
@@ -133,7 +133,7 @@ function changePhotoSectionImage() {
   photoSectionImages[1].style.setProperty("display", `block`);
 
   setTimeout(() => {
-    photoSectionImages[0].style.setProperty("--transform-y", `376px`);
+    photoSectionImages[0].style.setProperty("--transform-y", `372px`);
     photoSectionImages[1].style.setProperty("--transform-y", `0px`);
   }, IMAGE_TRANSITION_DELAY / 2);
 
@@ -159,7 +159,70 @@ function changePhotoSectionImage() {
       );
       element.style.setProperty(
         "--transform-y",
-        `calc(376px*-${Number(element.getAttribute("data-slide")) - 1})`
+        `calc(372px*-${Number(element.getAttribute("data-slide")) - 1})`
+      );
+      element.setAttribute(
+        "data-slide",
+        Number(element.getAttribute("data-slide")) - 1
+      );
+    }
+  }, IMAGE_ANIMATION_DELAY + (IMAGE_TRANSITION_DELAY + 500));
+}
+
+function setArtsSectionImagesMargin() {
+  const artSectionImages = document.querySelectorAll(
+    "[data-section-image='arts']"
+  );
+  for (i = 0; i < artSectionImages.length; i++) {
+    artSectionImages[i].style.setProperty(
+      "--transform-duration",
+      `${IMAGE_TRANSITION_DELAY}ms`
+    );
+  }
+  for (i = 1; i < artSectionImages.length; i++) {
+    artSectionImages[i].style.setProperty(
+      "--transform-y",
+      `calc(186px*-${i})`
+    );
+    artSectionImages[i].style.setProperty("display", `none`);
+  }
+}
+
+function changeArtsSectionImage() {
+  const artSectionImages = document.querySelectorAll(
+    "[data-section-image='arts']"
+  );
+  const artSectionContainer = document.getElementById("arts-image");
+  artSectionImages[1].style.setProperty("display", `block`);
+
+  setTimeout(() => {
+    artSectionImages[0].style.setProperty("--transform-y", `186px`);
+    artSectionImages[1].style.setProperty("--transform-y", `0px`);
+  }, IMAGE_TRANSITION_DELAY / 2);
+
+  setTimeout(() => {
+    artSectionImages[0].style.setProperty("display", `none`);
+    const backEl = document
+      .querySelector(`[data-section-image='arts'][data-slide='0']`)
+      .cloneNode(true);
+    artSectionContainer.removeChild(
+      document.querySelector(`[data-section-image='arts'][data-slide='0']`)
+    );
+    backEl.setAttribute("data-slide", artSectionImages.length - 1);
+    artSectionContainer.appendChild(backEl);
+  }, IMAGE_ANIMATION_DELAY + IMAGE_TRANSITION_DELAY);
+
+  setTimeout(() => {
+    const artSectionImagesRev = document.querySelectorAll(
+      "[data-section-image='arts']"
+    );
+    for (i = 1; i < artSectionImagesRev.length; i++) {
+      const element = document.querySelector(
+        `[data-section-image='arts'][data-slide='${i}']`
+      );
+      element.style.setProperty(
+        "--transform-y",
+        `calc(186px*-${Number(element.getAttribute("data-slide")) - 1})`
       );
       element.setAttribute(
         "data-slide",
@@ -174,4 +237,6 @@ window.onload = () => {
   setInterval(updatePlayingTrack, 180000);
   setPhotoSectionImagesMargin();
   setInterval(changePhotoSectionImage, IMAGE_CHANGE_DELAY);
+  setArtsSectionImagesMargin();
+  setInterval(changeArtsSectionImage, IMAGE_CHANGE_DELAY);
 };
