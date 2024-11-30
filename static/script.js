@@ -3,6 +3,7 @@ const SONG_CHANGE_DELAY = 180000;
 const SYMBOL_DELAY = 150;
 
 const IMAGE_CHANGE_DELAY = 6000;
+const ARTS_CHANGE_DELAY = 6500;
 const IMAGE_ANIMATION_DELAY = 1000;
 const IMAGE_TRANSITION_DELAY = 1000;
 
@@ -238,5 +239,5 @@ window.onload = () => {
   setPhotoSectionImagesMargin();
   setInterval(changePhotoSectionImage, IMAGE_CHANGE_DELAY);
   setArtsSectionImagesMargin();
-  setInterval(changeArtsSectionImage, IMAGE_CHANGE_DELAY);
+  setInterval(changeArtsSectionImage, ARTS_CHANGE_DELAY);
 };
