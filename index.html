@@ -41,12 +41,14 @@
             <a href="#landing">
                 <div class="flex items-center gap-4 px-4 py-2 sm:py-4">
                     <img src="./static/avatar_512.png" alt="" class=" rounded-lg w-[64px] lg:w-[64px] 2xl:w-[64px]" />
-                    <h1 class="text-2xl font-semibold xl:text-3xl 2xl:text-4xl">KENTAI RADIQUUM</h1>
+                    <h1 class="text-2xl font-semibold xl:text-3xl 2xl:text-4xl" data-i18n="NAME">KENTAI RADIQUUM</h1>
                 </div>
             </a>
             <div class="flex gap-1 px-4 mb-2 sm:px-0 sm:gap-2">
-                <a class="px-4 py-2 rounded-md sm:text-xl hover:underline bg-bg-gray" href="#about">ABOUT ME</a>
-                <a class="px-4 py-2 rounded-md sm:text-xl hover:underline bg-bg-gray" href="#links">LINKS</a>
+                <a class="px-4 py-2 rounded-md sm:text-xl hover:underline bg-bg-gray" href="#about"
+                    data-i18n="BTN_ABOUT_ME">ABOUT ME</a>
+                <a class="px-4 py-2 rounded-md sm:text-xl hover:underline bg-bg-gray" href="#links"
+                    data-i18n="BTN_LINKS">LINKS</a>
             </div>
         </div>
     </header>
@@ -66,43 +68,51 @@
                     target="_blank" referrerpolicy="origin">@sleepy_muzzle</a>
             </div>
             <div class="w-full p-4 text-white bg-bg-pink md:bg-transparent md:w-auto">
-                <h1 class="text-3xl font-semibold sm:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl">KENTAI RADIQUUM</h1>
-                <p class="text-xl font-light lg:text-4xl xl:text-4xl 2xl:text-5xl">He / Him <br class="md:hidden" />
-                    <span class="hidden md:inline">•</span> Red panda / Protogen
+                <h1 class="text-3xl font-semibold sm:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl" data-i18n="NAME">
+                    KENTAI RADIQUUM</h1>
+                <p class="text-xl font-light lg:text-4xl xl:text-4xl 2xl:text-5xl"><span data-i18n="PRONOUNCE">He / Him
+                    </span><br class="md:hidden" />
+                    <span class="hidden md:inline">•</span> <span data-i18n="SPECIES">Red panda / Protogen</span>
                 </p>
             </div>
         </div>
 
         <div class="flex flex-row flex-wrap justify-center order-2 gap-2 p-4 text-2xl text-white md:gap-4">
             <a href="https://furaffinity.net/user/radiquum"
-                class="underline text-bg-pink hover:underline sm:no-underline" target="_blank"
-                referrerpolicy="origin">Furry<span class="inline sm:hidden">.</span></a>
+                class="underline text-bg-pink hover:underline sm:no-underline" target="_blank" referrerpolicy="origin"
+                data-i18n="QUICK_BIO_FURRY">Furry<span class="inline sm:hidden">.</span></a>
             <span class="hidden sm:block">/</span>
             <a href="https://github.com/radiquum" class="underline text-bg-pink hover:underline sm:no-underline"
-                target="_blank" referrerpolicy="origin">Coder<span class="inline sm:hidden">.</span></a>
+                target="_blank" referrerpolicy="origin" data-i18n="QUICK_BIO_CODER">Coder<span
+                    class="inline sm:hidden">.</span></a>
             <span class="hidden sm:block">/</span>
             <a href="https://wah.su/photos" class="underline text-bg-pink hover:underline sm:no-underline"
-                target="_blank" referrerpolicy="origin">Photographer<span class="inline sm:hidden">.</span></a>
+                target="_blank" referrerpolicy="origin" data-i18n="QUICK_BIO_PHOTOGRAPHER">Photographer<span
+                    class="inline sm:hidden">.</span></a>
             <span class="hidden sm:block">/</span>
             <a href="https://wah.su" class="underline text-bg-pink hover:underline sm:no-underline" target="_blank"
-                referrerpolicy="origin">Self-Hosting Enthusiast<span class="inline sm:hidden">.</span></a>
+                referrerpolicy="origin" data-i18n="QUICK_BIO_ENTHUSIAST">Self-Hosting Enthusiast<span
+                    class="inline sm:hidden">.</span></a>
         </div>
 
         <p
             class="flex flex-col flex-wrap items-center justify-center order-4 gap-2 px-2 text-2xl text-white sm:flex-row md:order-3">
-            Now listening to: <a class="text-bg-pink hover:underline" href="https://last.fm/user/radiquum"
-                id="track-name" target="_blank" referrerpolicy="origin">LOADING . . .</a></p>
+            <span data-i18n="QUICK_BIO_LASTFM">Now listening to:</span> <a class="text-bg-pink hover:underline"
+                href="https://last.fm/user/radiquum" id="track-name" target="_blank" referrerpolicy="origin">LOADING . .
+                .</a>
+        </p>
 
         <div
             class="flex flex-row flex-wrap items-center justify-center order-3 gap-8 py-4 -mt-4 text-white md:mt-auto md:order-4">
             <img src="./static/arrow_downward.svg" alt="" class="hidden w-24 h-24 animate-bounce md:block" />
-            <p class="hidden text-4xl md:block">or</p>
+            <p class="hidden text-4xl md:block" data-i18n="BTN_OR">or</p>
             <div class="flex flex-row items-center gap-2">
-                <a class="px-4 py-4 text-2xl underline text-bg-pink hover:underline sm:no-underline" href="#about">ABOUT
+                <a class="px-4 py-4 text-2xl underline text-bg-pink hover:underline sm:no-underline" href="#about"
+                    data-i18n="BTN_ABOUT_ME">ABOUT
                     ME</a>
                 <span class="text-2xl">/</span>
-                <a class="px-4 py-4 text-2xl underline text-bg-pink hover:underline sm:no-underline"
-                    href="#links">LINKS</a>
+                <a class="px-4 py-4 text-2xl underline text-bg-pink hover:underline sm:no-underline" href="#links"
+                    data-i18n="BTN_LINKS">LINKS</a>
             </div>
         </div>
 
@@ -110,26 +120,29 @@
 
     <!-- ABOUT ME SECTION -->
     <div class="container px-2 py-4 text-white scroll-mt-36 sm:scroll-mt-28 lg:scroll-mt-4 xl:scroll-mt-20" id="about">
-        <h1 class="mb-12 text-4xl font-bold text-center lg:mt-28 2xl:mt-20 sm:text-6xl">ABOUT ME</h1>
+        <h1 class="mb-12 text-4xl font-bold text-center lg:mt-28 2xl:mt-20 sm:text-6xl" data-i18n="CARD_TITLE">ABOUT ME
+        </h1>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
             <div class="flex flex-col gap-4">
                 <div class="flex flex-col overflow-hidden rounded-lg">
                     <div class="flex items-center justify-center w-full p-8 bg-bg-gray">
-                        <p class="text-4xl font-bold">Tech enthusiast</p>
+                        <p class="text-4xl font-bold" data-i18n="CARD_TECH_ENTHUSIAST_TITLE">Tech enthusiast</p>
                     </div>
                     <div class="flex justify-center px-8 py-4 bg-opacity-50 bg-bg-gray">
-                        <p class="text-lg font-light">I'm a tech enthusiast with a passion for software
+                        <p class="text-lg font-light" data-i18n="CARD_TECH_ENTHUSIAST_DESC">I'm a tech enthusiast with a
+                            passion for software
                             development. I love diving into code and exploring new software, though hardware fascinates
                             me too.</p>
                     </div>
                 </div>
                 <div class="flex flex-col overflow-hidden rounded-lg">
                     <div class="flex items-center justify-center w-full p-8 bg-yellow-500">
-                        <p class="text-4xl font-bold">Photographer</p>
+                        <p class="text-4xl font-bold" data-i18n="CARD_PHOTOGRAPHER_TITLE">Photographer</p>
                     </div>
                     <div class="flex justify-center px-8 py-4 bg-yellow-500 bg-opacity-40">
-                        <p class="text-lg font-light">I’m also getting into <a class="text-bg-pink hover:underline"
-                                href="https://wah.su/photos" target="_blank" referrerpolicy="origin">photography</a> and
+                        <p class="text-lg font-light" data-i18n="CARD_PHOTOGRAPHER_DESC">I’m also getting into <a
+                                class="text-bg-pink hover:underline" href="https://wah.su/photos" target="_blank"
+                                referrerpolicy="origin">photography</a> and
                             excited to share my progress.</p>
                     </div>
                 </div>
@@ -137,34 +150,37 @@
             <div class="flex flex-col gap-4">
                 <div class="flex flex-col overflow-hidden rounded-lg">
                     <div class="flex items-center justify-center w-full p-8 bg-bg-gray">
-                        <p class="text-4xl font-bold">Self-Hosting stuff</p>
+                        <p class="text-4xl font-bold" data-i18n="CARD_SELFHOSTER_TITLE">Self-Hosting stuff</p>
                     </div>
                     <div class="flex justify-center px-8 py-4 bg-opacity-50 bg-bg-gray">
-                        <p class="text-lg font-light">I'm really into self-hosting through my <a
-                                class="text-bg-pink hover:underline" href="https://home.wah.su" target="_blank"
-                                referrerpolicy="origin">wah.su</a> project, which helps me dive into server management
+                        <p class="text-lg font-light" data-i18n="CARD_SELFHOSTER_DESC">I'm really into self-hosting
+                            through my <a class="text-bg-pink hover:underline" href="https://home.wah.su"
+                                target="_blank" referrerpolicy="origin">wah.su</a> project, which helps me dive into
+                            server management
                             and hosting platforms.</p>
                     </div>
                 </div>
                 <div class="flex flex-col overflow-hidden rounded-lg">
                     <div class="flex items-center justify-center w-full p-8 bg-pink-600">
-                        <p class="text-4xl font-bold">Music</p>
+                        <p class="text-4xl font-bold" data-i18n="CARD_MUSIC_TITLE">Music</p>
                     </div>
                     <div class="flex justify-center px-8 py-4 bg-pink-600 bg-opacity-50">
-                        <p class="text-lg font-light">I listen a lot of various music, but mainly listen to
+                        <p class="text-lg font-light" data-i18n="CARD_MUSIC_DESC">I listen a lot of various music, but
+                            mainly listen to
                             EDM \ Happy Hardcore \ Tech \ Rock \ Alternative. By artist like: S3RL, Camellia,
                             t+pazolite, BTMH, Saint Motel, and more...</p>
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col gap-4  sm:-mt-[86px] lg:-mt-[60px] xl:-mt-0">
+            <div class="flex flex-col gap-4  sm:-mt-[var(--sm--mt)] lg:-mt-[var(--lg--mt)] xl:-mt-0"
+                data-i18n-style="CARD_SKILLS_STYLE" style="--sm--mt:86px; --lg--mt:60px;">
                 <div class="flex flex-col overflow-hidden rounded-lg">
                     <div class="flex items-center justify-center w-full p-8 bg-green-500">
-                        <p class="text-4xl font-bold">Skills</p>
+                        <p class="text-4xl font-bold" data-i18n="CARD_SKILLS_TITLE">Skills</p>
                     </div>
                     <div class="flex flex-col justify-center gap-2 px-8 py-4 bg-green-500 bg-opacity-50 ">
                         <div>
-                            <p class="text-base font-bold">Front-end development</p>
+                            <p class="text-base font-bold" data-i18n="CARD_SKILLS_FRONTEND">Front-end development</p>
                             <ul class="flex flex-wrap text-lg font-light gap-x-2">
                                 <li>HTML</li>
                                 <li>CSS</li>
@@ -175,7 +191,7 @@
                             </ul>
                         </div>
                         <div>
-                            <p class="text-base font-bold">Back-end development</p>
+                            <p class="text-base font-bold" data-i18n="CARD_SKILLS_BACKEND">Back-end development</p>
                             <ul class="flex flex-wrap text-lg font-light gap-x-2">
                                 <li>Python</li>
                                 <li>Node.js</li>
@@ -183,7 +199,7 @@
                             </ul>
                         </div>
                         <div>
-                            <p class="text-base font-bold">API</p>
+                            <p class="text-base font-bold" data-i18n="CARD_SKILLS_API">API</p>
                             <ul class="flex flex-wrap text-lg font-light gap-x-2">
                                 <li>Postman/Hoppscotch</li>
                                 <li>mitmproxy</li>
@@ -191,14 +207,14 @@
                             </ul>
                         </div>
                         <div>
-                            <p class="text-base font-bold">Collaboration</p>
+                            <p class="text-base font-bold" data-i18n="CARD_SKILLS_COLLAB">Collaboration</p>
                             <ul class="flex flex-wrap text-lg font-light gap-x-2">
                                 <li>Git</li>
                                 <li>Github</li>
                             </ul>
                         </div>
                         <div>
-                            <p class="text-base font-bold">Deployment</p>
+                            <p class="text-base font-bold" data-i18n="CARD_SKILLS_DEPLOY">Deployment</p>
                             <ul class="flex flex-wrap text-lg font-light gap-x-2">
                                 <li>Docker</li>
                                 <li>Docker-compose</li>
@@ -211,10 +227,11 @@
             <div class="flex flex-col gap-4">
                 <div class="flex flex-col overflow-hidden rounded-lg">
                     <div class="flex items-center justify-center w-full p-8 bg-orange-600">
-                        <p class="text-4xl font-bold">Red Pandas admirer</p>
+                        <p class="text-4xl font-bold" data-i18n="CARD_READPANDA_TITLE">Red Pandas admirer</p>
                     </div>
                     <div class="flex justify-center px-8 py-4 bg-orange-600 bg-opacity-50">
-                        <p class="text-lg font-light">One of my biggest loves is red pandas—I can’t get
+                        <p class="text-lg font-light" data-i18n="CARD_READPANDA_DESC">One of my biggest loves is red
+                            pandas—I can’t get
                             enough
                             of them! I’ve been collecting red panda stickers and sharing them on the <a
                                 class="text-bg-pink hover:underline" href="https://t.me/red_panda_stickers"
@@ -226,10 +243,11 @@
                 </div>
                 <div class="flex flex-col overflow-hidden rounded-lg">
                     <div class="flex items-center justify-center w-full p-8 bg-blue-500">
-                        <p class="text-3xl font-bold sm:text-4xl">Contact</p>
+                        <p class="text-3xl font-bold sm:text-4xl" data-i18n="CARD_CONTACT_TITLE">Contact</p>
                     </div>
                     <div class="flex justify-center px-8 py-4 bg-blue-500 bg-opacity-50">
-                        <p class="text-lg font-light">Feel free to reach out anytime! Ways to contact me via
+                        <p class="text-lg font-light" data-i18n="CARD_CONTACT_DESC">Feel free to reach out anytime! Ways
+                            to contact me via
                             instant messengers are available in <a class="text-bg-pink hover:underline"
                                 href="#links">links</a> section!</p>
                     </div>
@@ -241,7 +259,7 @@
     <!-- Links Section -->
 
     <div class="container px-2 py-4 text-white scroll-mt-36 sm:scroll-mt-28 lg:scroll-mt-4 xl:scroll-mt-20" id="links">
-        <h1 class="mb-12 text-4xl font-bold text-center lg:mt-28 2xl:mt-20 sm:text-6xl">LINKS</h1>
+        <h1 class="mb-12 text-4xl font-bold text-center lg:mt-28 2xl:mt-20 sm:text-6xl" data-i18n="LNK_TITLE">LINKS</h1>
         <div class="grid gap-4 grid-cols-fluid">
 
             <div class="flex flex-col gap-4">
@@ -260,24 +278,26 @@
                                 alt="" src="./static/assets/photos/photo_flowers.jpg" data-section-image="photos"
                                 data-slide="2" data-photo="photo_flowers" />
                             <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform ease-out duration-[var(--transform-duration,150ms)]"
-                                alt="" src="./static/assets/photos/photo_plush.jpg" data-section-image="photos" data-slide="3"
-                                data-photo="photo_plush" />
+                                alt="" src="./static/assets/photos/photo_plush.jpg" data-section-image="photos"
+                                data-slide="3" data-photo="photo_plush" />
                             <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform ease-out duration-[var(--transform-duration,150ms)]"
-                                alt="" src="./static/assets/photos/photo_tower.jpg" data-section-image="photos" data-slide="4"
-                                data-photo="photo_tower" />
+                                alt="" src="./static/assets/photos/photo_tower.jpg" data-section-image="photos"
+                                data-slide="4" data-photo="photo_tower" />
                             <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform ease-out duration-[var(--transform-duration,150ms)]"
-                                alt="" src="./static/assets/photos/photo_trains.jpg" data-section-image="photos" data-slide="5"
-                                data-photo="photo_trains" />
+                                alt="" src="./static/assets/photos/photo_trains.jpg" data-section-image="photos"
+                                data-slide="5" data-photo="photo_trains" />
                             <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform ease-out duration-[var(--transform-duration,150ms)]"
-                                alt="" src="./static/assets/photos/photo_train_on_bridge.jpg" data-section-image="photos" data-slide="6"
-                                data-photo="photo_train_on_bridge" />
+                                alt="" src="./static/assets/photos/photo_train_on_bridge.jpg"
+                                data-section-image="photos" data-slide="6" data-photo="photo_train_on_bridge" />
                             <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform ease-out duration-[var(--transform-duration,150ms)]"
-                                alt="" src="./static/assets/photos/photo_tower_night.jpg" data-section-image="photos" data-slide="7"
-                                data-photo="photo_tower_night" />
+                                alt="" src="./static/assets/photos/photo_tower_night.jpg" data-section-image="photos"
+                                data-slide="7" data-photo="photo_tower_night" />
                             <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform ease-out duration-[var(--transform-duration,150ms)]"
-                                alt="" src="./static/assets/photos/photo_leaf_macro.jpg" data-section-image="photos" data-slide="8"
-                                data-photo="photo_leaf_macro" />
-                            <p class="font-bold text-4xl p-[8px] w-full h-full bg-black bg-opacity-20 flex items-end justify-end">PHOTOS</p>
+                                alt="" src="./static/assets/photos/photo_leaf_macro.jpg" data-section-image="photos"
+                                data-slide="8" data-photo="photo_leaf_macro" />
+                            <p
+                                class="font-bold text-4xl p-[8px] w-full h-full bg-black bg-opacity-20 flex items-end justify-end" data-i18n="LNK_PHOTO_HEADER">
+                                PHOTOS</p>
                         </div>
                     </div>
                     <a class="hover:border-bg-blue w-[170px] xs:flex-1 border-transparent border-2 border-solid transition-[border-color] aspect-square overflow-hidden rounded-lg"
@@ -286,7 +306,7 @@
                             <img class="w-16 h-16 mx-auto" alt="" src="./static/assets/pixelfed.svg" />
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium ">pixey.org</p>
-                                <p class="text-base font-light ">See the photos like in instagram</p>
+                                <p class="text-base font-light " data-i18n="LNK_PHOTO_PIXEY">See the photos like in instagram</p>
                             </div>
                         </div>
                     </a>
@@ -296,7 +316,7 @@
                             <img class="w-16 h-16 mx-auto" alt="" src="./static/assets/pixelfed.svg" />
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium ">instafops.net</p>
-                                <p class="text-base font-light ">Photos that more furry related</p>
+                                <p class="text-base font-light " data-i18n="LNK_PHOTO_INSTAFOPS">Photos that more furry related</p>
                             </div>
                         </div>
                     </a>
@@ -306,7 +326,7 @@
                             <img class="w-16 h-16" alt="" src="./static/assets/immich.png" />
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium ">wah.su/photos</p>
-                                <p class="text-base font-light ">View gallery like in google photos</p>
+                                <p class="text-base font-light " data-i18n="LNK_PHOTO_IMMICH">View gallery like in google photos</p>
                             </div>
                         </div>
                     </a>
@@ -340,13 +360,13 @@
                                 alt="" src="./static/assets/arts/art_cheeseoncheese.jpg" data-section-image="arts"
                                 data-slide="7" data-photo="art_cheeseoncheese" />
                             <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform ease-out duration-[var(--transform-duration,150ms)]"
-                                alt="" src="./static/assets/arts/art_tail.jpg" data-section-image="arts"
-                                data-slide="8" data-photo="art_tail" />
+                                alt="" src="./static/assets/arts/art_tail.jpg" data-section-image="arts" data-slide="8"
+                                data-photo="art_tail" />
                             <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform ease-out duration-[var(--transform-duration,150ms)]"
                                 alt="" src="./static/assets/arts/art_newyear.jpg" data-section-image="arts"
                                 data-slide="9" data-photo="art_newyear" />
                             <p
-                                class="font-bold text-4xl p-[8px] w-full h-full bg-black bg-opacity-20 flex items-end justify-end">
+                                class="font-bold text-4xl p-[8px] w-full h-full bg-black bg-opacity-20 flex items-end justify-end" data-i18n="LNK_ARTS_HEADER">
                                 ARTS</p>
                         </div>
                     </div>
@@ -379,7 +399,7 @@
                     <div
                         class="w-full aspect-[2/1] border-transparent border-2 border-solid max-h-[182px] overflow-hidden rounded-lg">
                         <div class="flex items-end justify-end w-full h-full bg-blue-500">
-                            <p class="font-bold text-4xl p-[8px]">SOCIAL MEDIA</p>
+                            <p class="font-bold text-4xl p-[8px]" data-i18n="LNK_SOCIALS_HEADER">SOCIAL MEDIA</p>
                         </div>
                     </div>
                     <a class="hover:border-bg-blue w-full aspect-[2/1] border-transparent border-2 border-solid transition-[border-color] max-h-[182px] overflow-hidden rounded-lg"
@@ -442,7 +462,7 @@
                     <div
                         class="w-full aspect-[2/1] border-transparent border-2 border-solid max-h-[182px] overflow-hidden rounded-lg">
                         <div class="flex items-end justify-end w-full h-full bg-black">
-                            <p class="font-bold text-4xl p-[8px]">PROJECTS</p>
+                            <p class="font-bold text-4xl p-[8px]" data-i18n="LNK_PROJECTS_HEADER">PROJECTS</p>
                         </div>
                     </div>
                     <a class="hover:border-bg-blue w-full aspect-[2/1] max-h-[182px] border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
@@ -451,7 +471,7 @@
                             <img class="absolute inset-0 object-cover -z-10" alt="" src="./static/assets/ANIX.png" />
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium">Anix</p>
-                                <p class="text-base font-light">Unofficial web client for Anixart android app,
+                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_ANIX">Unofficial web client for Anixart android app,
                                     made in Next.JS</p>
                             </div>
                         </div>
@@ -464,7 +484,7 @@
                                 alt="" src="./static/assets/TG_Photos.png" />
                             <div class="flex flex-col justify-end h-full gap-1">
                                 <p class="text-2xl font-medium">TG-Photos</p>
-                                <p class="text-base font-light">Telegram bot to use telegram as a Google
+                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_TGP">Telegram bot to use telegram as a Google
                                     Photo alternative</p>
                             </div>
                         </div>
@@ -477,7 +497,7 @@
                                 alt="" src="./static/assets/WordGen.png" />
                             <div class="flex flex-col justify-end h-full gap-1">
                                 <p class="text-2xl font-medium">WordGen</p>
-                                <p class="text-base font-light">Random word generator inspired by @tsoding
+                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_WG">Random word generator inspired by @tsoding
                                 </p>
                             </div>
                         </div>
@@ -488,7 +508,7 @@
                             class="relative flex flex-col justify-around w-full h-full p-2 overflow-hidden text-white bg-black">
                             <div class="flex flex-col justify-end h-full gap-1">
                                 <p class="text-2xl font-medium">furaffinity-dl</p>
-                                <p class="text-base font-light">Modification of the original project to
+                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_FADL">Modification of the original project to
                                     add more functionality</p>
                             </div>
                         </div>
@@ -499,7 +519,7 @@
                             <img class="mx-auto w-14 h-14" alt="" src="./static/assets/github-mark-white.png" />
                             <div class="flex flex-col justify-end gap-1">
                                 <p class="text-2xl font-medium">Github</p>
-                                <p class="text-base font-light">View my other repositories</p>
+                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_GITHUB">View my other repositories</p>
                             </div>
                         </div>
                     </a>
@@ -511,7 +531,7 @@
                             <div class="absolute inset-0 bg-black -z-20"></div>
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium">wah.su</p>
-                                <p class="text-base font-light">My Self-Hosting endeavor</p>
+                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_WAHSU">My Self-Hosting endeavor</p>
                             </div>
                         </div>
                     </a>
@@ -523,7 +543,7 @@
                     <div
                         class="w-full aspect-[2/1] border-transparent border-2 border-solid max-h-[182px] overflow-hidden rounded-lg">
                         <div class="flex items-end justify-end w-full h-full bg-pink-600">
-                            <p class="font-bold text-4xl p-[8px]">CONTACT</p>
+                            <p class="font-bold text-4xl p-[8px]" data-i18n="LNK_CONTACT_HEADER">CONTACT</p>
                         </div>
                     </div>
                     <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
@@ -575,7 +595,7 @@
                         <div
                             class="w-full aspect-[2/1] border-transparent border-2 border-solid max-h-[182px] overflow-hidden rounded-lg">
                             <div class="flex items-end justify-end w-full h-full bg-orange-400">
-                                <p class="font-bold text-4xl p-[8px] text-right">COLLECTIONS & FRIENDS</p>
+                                <p class="font-bold text-4xl p-[8px] text-right" data-i18n="LNK_FRIEND_HEADER">COLLECTIONS & FRIENDS</p>
                             </div>
                         </div>
                     </div>
@@ -585,7 +605,7 @@
                         <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium">Red Pandas Stickers</p>
-                                <p class="text-base font-light">Telegram channel with red panda
+                                <p class="text-base font-light" data-i18n="LNK_COLLECTION_RPS">Telegram channel with red panda
                                     sticker packs</p>
                             </div>
                         </div>
@@ -596,7 +616,7 @@
                         <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium">Red Panda Images</p>
-                                <p class="text-base font-light">3000+ Photos and Videos of a red pandas</p>
+                                <p class="text-base font-light" data-i18n="LNK_COLLECTION_RPI">3000+ Photos and Videos of a red pandas</p>
                             </div>
                         </div>
                     </a>
@@ -606,7 +626,7 @@
                         <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium">blep stash</p>
-                                <p class="text-base font-light">VK Group of a photographer.
+                                <p class="text-base font-light" data-i18n="LNK_FRIEND_BLEP">VK Group of a photographer.
                                     City and
                                     Trains photography</p>
                             </div>
@@ -618,7 +638,7 @@
                         <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium">itc1205</p>
-                                <p class="text-base font-light">Github profile of another furry
+                                <p class="text-base font-light" data-i18n="LNK_FRIEND_ITC">Github profile of another furry
                                     programmer</p>
                             </div>
                         </div>
@@ -630,6 +650,8 @@
 
     </div>
     <script src="./static/script.js"></script>
+    <script src="./static/i18n/strings/ru.js"></script>
+    <script src="./static/i18n/i18n.js"></script>
 </body>
 
 </html>
