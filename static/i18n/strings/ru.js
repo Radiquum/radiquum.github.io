@@ -14,6 +14,7 @@ const i18n_ru = {
   BTN_ABOUT_ME: "ОБО МНЕ",
   BTN_OR: "или",
   BTN_LINKS: "ССЫЛКИ",
+  BTN_CHARACTERS: "ПЕРСОНАЖИ",
 
   // ABOUT ME
   CARD_TITLE: "ОБО МНЕ",
@@ -41,7 +42,9 @@ const i18n_ru = {
   CARD_CONTACT_TITLE: "Связаться",
   CARD_CONTACT_DESC:
     "Не стесняйтесь связаться со мной в любое время! Способы связаться со мной через мессенджеры доступны в разделе |% LINK='#links' %|ссылок!|% ENDLINK %|.",
-  LNK_TITLE: "ССЫЛКИ",
+
+  // LINKS
+    LNK_TITLE: "ССЫЛКИ",
   LNK_PHOTO_HEADER: "ФОТОГРАФИИ",
   LNK_PHOTO_PIXEY: "Смотри фото как в инстаграме",
   LNK_PHOTO_INSTAFOPS: "Более фурри фото",
@@ -62,6 +65,17 @@ const i18n_ru = {
   LNK_COLLECTION_RPI: "3000+ Фото и видео с красными пандами",
   LNK_FRIEND_BLEP: "ВК Группа классного фотографа",
   LNK_FRIEND_ITC: "GitHub профиль другого фурри-кодера",
+
+  // CHARACTERS
+  CHR_KR_GOTO: "Нажмите, чтобы перейти к описанию",
+  CHR_KR_SPECIES: "Красная Панда",
+  CHR_KB_GOTO: "Нажмите, чтобы скачать референс",
+  CHR_KB_SPECIES: "Протоген",
+
+  // CHR_KR_BIRTH: "Дата рождения",
+  // CHR_KR_HEIGHT: "Рост",
+  // CHR_KR_WEIGHT: "Вес",
+  // CHR_KR_BREED: "Порода",
 };
 
 const i18n_ru_style = {

@@ -746,12 +746,52 @@ video {
   height: 100%;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
+.h-\[99vh\] {
+  height: 99vh;
+}
+
+.h-\[98vh\] {
+  height: 98vh;
+}
+
+.h-\[95vh\] {
+  height: 95vh;
+}
+
+.h-\[90vh\] {
+  height: 90vh;
+}
+
+.h-\[80vh\] {
+  height: 80vh;
+}
+
+.h-\[85vh\] {
+  height: 85vh;
+}
+
+.h-\[87vh\] {
+  height: 87vh;
+}
+
+.h-\[89vh\] {
+  height: 89vh;
+}
+
 .max-h-\[182px\] {
   max-height: 182px;
 }
 
 .max-h-\[50vh\] {
   max-height: 50vh;
+}
+
+.max-h-screen {
+  max-height: 100vh;
 }
 
 .min-h-screen {
@@ -782,6 +822,10 @@ video {
   width: 256px;
 }
 
+.w-\[50vw\] {
+  width: 50vw;
+}
+
 .w-\[64px\] {
   width: 64px;
 }
@@ -792,6 +836,10 @@ video {
 
 .max-w-\[50vw\] {
   max-width: 50vw;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .-translate-y-full {
@@ -1057,6 +1105,22 @@ video {
   --tw-bg-opacity: 0.5;
 }
 
+.bg-opacity-85 {
+  --tw-bg-opacity: 0.85;
+}
+
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
+}
+
+.bg-opacity-5 {
+  --tw-bg-opacity: 0.05;
+}
+
+.bg-opacity-25 {
+  --tw-bg-opacity: 0.25;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -1121,6 +1185,10 @@ video {
   text-align: right;
 }
 
+.align-bottom {
+  vertical-align: bottom;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1149,6 +1217,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -1296,6 +1369,10 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:opacity-25 {
+  opacity: 0.25;
+}
+
 @media (min-width: 370px) {
   .xs\:flex-1 {
     flex: 1 1 0%;
@@ -1325,6 +1402,10 @@ body {
 
   .sm\:block {
     display: block;
+  }
+
+  .sm\:inline-block {
+    display: inline-block;
   }
 
   .sm\:hidden {
@@ -1443,6 +1524,21 @@ body {
   .md\:bg-transparent {
     background-color: transparent;
   }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1458,8 +1554,16 @@ body {
     width: 64px;
   }
 
+  .lg\:max-w-\[50vw\] {
+    max-width: 50vw;
+  }
+
   .lg\:scroll-mt-4 {
     scroll-margin-top: 1rem;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
   }
 
   .lg\:text-4xl {
