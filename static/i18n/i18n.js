@@ -26,12 +26,15 @@ function parseLink(string) {
 
 const i18nTags = document.querySelectorAll("[data-i18n]");
 const i18nStyles = document.querySelectorAll("[data-i18n-style]");
+const i18nHrefs = document.querySelectorAll("[data-i18n-href]");
 function changeLanguage(lang) {
   let strings = {};
   let styles = {};
+  let hrefs = {};
   if (lang == "ru") {
     strings = i18n_ru;
     styles = i18n_ru_style;
+    hrefs = i18n_ru_href;
   }
 
   for (let i = 0; i < i18nTags.length; i++) {
@@ -55,6 +58,15 @@ function changeLanguage(lang) {
     }
 
     element.style.cssText = styles[id];
+  }
+  for (let i = 0; i < i18nHrefs.length; i++) {
+    const element = i18nHrefs[i];
+    const id = element.getAttribute("data-i18n-href");
+    if (!hrefs[id]) {
+      continue;
+    }
+
+    element.href = hrefs[id];
   }
 }
 
