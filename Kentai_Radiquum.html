@@ -52,41 +52,31 @@
             </div>
         </div>
     </header>
-    <div class="flex flex-col flex-wrap w-full lg:flex-row">
-        <a class="group" href="./Kentai_Radiquum.html">
-            <div class="w-full lg:max-w-[50vw] relative">
-                <div
-                    class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black bg-opacity-50 group-hover:opacity-25">
-                    <p class="md:text-xl" data-i18n="CHR_KR_GOTO">Click to go to description</p>
-                    <div>
-                        <h1 class="text-3xl font-bold md:text-6xl">Kentai Radiquum</h1>
-                        <h2 class="text-2xl md:text-4xl" data-i18n="CHR_KR_SPECIES">Red Panda</h2>
-                    </div>
-                </div>
-                <img alt="" src="./static/assets/characters/thumb/KentaiRadiquum.jpg" class="object-cover w-full" />
+
+    <button
+        class="absolute z-50 flex items-center justify-center w-16 h-16 rounded-full shadow-md bottom-8 right-8 bg-bg-pink"
+        id="downloadBtn" onclick="showMenu()">
+        <img alt="" src="./static/assets/icon--download.svg" class="w-8" id="downloadBtn_icon" />
+
+        <div class="relative transition-all scale-0 -rotate-90 translate-x-4 z-100" id="downloadMenu">
+            <div class="absolute -right-4 bottom-12 w-max">
+                <a href="./static/assets/characters/KentaiRadiquum/Kentai_Radiquum_EN.pdf" download="Kentai_Radiquum_EN.pdf" class="flex items-center justify-start w-full gap-2 p-2 px-4 text-white rounded-lg bg-bg-pink">
+                    <img alt="" src="./static/assets/icon--picture_as_pdf.svg" class="w-8 h-8" />
+                    <p class="text-lg">Download PDF</p>
+                </a>
+                <a href="./static/assets/characters/KentaiRadiquum/Kentai_Radiquum.png" download="Kentai_Radiquum.png" class="flex items-center justify-start w-full gap-2 p-2 px-4 mt-2 text-white rounded-lg bg-bg-pink">
+                    <img alt="" src="./static/assets/icon--image.svg" class="w-8 h-8" />
+                    <p class="text-lg">Download Image</p>
+                </a>
             </div>
-        </a>
-        <a class="group" href="./static/assets/characters/KentaiBibiquum/Kentai_Bibiquum.jpg"
-            download="Kentai_Bibiquum.jpg">
-            <div class="w-full lg:max-w-[50vw] relative">
-                <div
-                    class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black bg-opacity-50 group-hover:opacity-25">
-                    <p class="md:text-xl" data-i18n="CHR_KB_GOTO">Click to download Ref</p>
-                    <div>
-                        <h1 class="text-3xl font-bold md:text-6xl">Kentai Bibiquum</h1>
-                        <h2 class="text-2xl md:text-4xl" data-i18n="CHR_KB_SPECIES">Protogen</h2>
-                    </div>
-                </div>
-                <img alt="" src="./static/assets/characters/thumb/KentaiBibiquum.jpg" class="object-cover w-full " />
-            </div>
-        </a>
-    </div>
+        </div>
 
+    </button>
 
-
-    <!-- <script src="./static/script.js"></script>  -->
     <script src="./static/i18n/strings/ru.js"></script>
     <script src="./static/i18n/i18n.js"></script>
+    <script src="./static/charactersMenu.js"></script>
+
 </body>
 
 </html>

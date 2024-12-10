@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./characters.html"],
+  content: ["./index.html", "./characters.html", "Kentai_Radiquum.html"],
   theme: {
     extend: {
       colors: {
