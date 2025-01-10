@@ -46,9 +46,11 @@ const i18n_ru = {
   // LINKS
     LNK_TITLE: "ССЫЛКИ",
   LNK_PHOTO_HEADER: "ФОТОГРАФИИ",
+  LNK_PHOTO_PHOTOWAH: "Мой телеграм канал с фотографиями",
   LNK_PHOTO_PIXEY: "Смотри фото как в инстаграме",
   LNK_PHOTO_INSTAFOPS: "Более фурри фото",
-  LNK_PHOTO_IMMICH: "Смотри фото как в Гугл Фото",
+  LNK_PHOTO_IMMICH_TITLE: "Онлайн Галерея",
+  LNK_PHOTO_IMMICH: "Альтернативные версии и невышедшие фотографии",
   LNK_ARTS_HEADER: "АРТЫ",
   LNK_SOCIALS_HEADER: "СОЦ. СЕТИ",
   LNK_PROJECTS_HEADER: "ПРОЕКТЫ",

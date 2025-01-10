@@ -1515,6 +1515,11 @@ body {
     text-align: right;
   }
 
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1528,11 +1533,6 @@ body {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .sm\:no-underline {
@@ -1561,6 +1561,10 @@ body {
     display: inline;
   }
 
+  .md\:grid {
+    display: grid;
+  }
+
   .md\:hidden {
     display: none;
   }
@@ -1571,6 +1575,10 @@ body {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:grid-cols-fluid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
   .md\:gap-4 {
