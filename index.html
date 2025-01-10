@@ -31,6 +31,7 @@
         content="Tech enthusiast with a passion for software development and self-hosting through my wah.su project. I'm also into photography and a big fan of red pandas, curating a collection of 3000+ photos and sti">
     <meta name="twitter:image" content="https://radiquum.wah.su/static/opengraph.png">
 
+    <link rel="prefetch" href="./characters.html">
 </head>
 
 <body class="flex flex-col gap-8 overflow-x-hidden bg-bg-black">
@@ -116,8 +117,8 @@
                 <a class="px-4 text-2xl underline sm:py-4 text-bg-pink hover:underline sm:no-underline" href="#links"
                     data-i18n="BTN_LINKS">LINKS</a>
                 <span class="hidden text-2xl sm:inline-block">/</span>
-                <a class="px-4 text-2xl underline sm:py-4 text-bg-pink hover:underline sm:no-underline" href="/characters.html"
-                    data-i18n="BTN_CHARACTERS">CHARACTERS</a>
+                <a class="px-4 text-2xl underline sm:py-4 text-bg-pink hover:underline sm:no-underline"
+                    href="/characters.html" data-i18n="BTN_CHARACTERS">CHARACTERS</a>
             </div>
         </div>
 
@@ -265,9 +266,9 @@
 
     <div class="container px-2 py-4 text-white scroll-mt-36 sm:scroll-mt-28 lg:scroll-mt-4 xl:scroll-mt-20" id="links">
         <h1 class="mb-12 text-4xl font-bold text-center lg:mt-28 2xl:mt-20 sm:text-6xl" data-i18n="LNK_TITLE">LINKS</h1>
-        <div class="grid gap-4 grid-cols-fluid">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
 
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 lg:[grid-column:span_2] lg:flex-row xl:flex-col xl:[grid-column:1]">
                 <div class="flex flex-wrap w-full gap-1">
                     <div
                         class="w-full overflow-hidden border-2 border-transparent border-solid rounded-lg aspect-square">
@@ -300,8 +301,8 @@
                             <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform ease-out duration-[var(--transform-duration,150ms)]"
                                 alt="" src="./static/assets/photos/photo_leaf_macro.jpg" data-section-image="photos"
                                 data-slide="8" data-photo="photo_leaf_macro" />
-                            <p
-                                class="font-bold text-4xl p-[8px] w-full h-full bg-black bg-opacity-20 flex items-end justify-end" data-i18n="LNK_PHOTO_HEADER">
+                            <p class="font-bold text-4xl p-[8px] w-full h-full bg-black bg-opacity-20 flex items-end justify-end"
+                                data-i18n="LNK_PHOTO_HEADER">
                                 PHOTOS</p>
                         </div>
                     </div>
@@ -311,42 +312,47 @@
                             <img class="w-16 h-16" alt="" src="./static/assets/Telegram.png" />
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium ">Photo-Wah</p>
-                                <p class="text-base font-light " data-i18n="LNK_PHOTO_PHOTOWAH">My Telegram Photo Channel</p>
+                                <p class="text-base font-light " data-i18n="LNK_PHOTO_PHOTOWAH">My Telegram Photo
+                                    Channel</p>
                             </div>
                         </div>
                     </a>
-                    <a class="hover:border-bg-blue w-[170px] xs:flex-1 border-transparent border-2 border-solid transition-[border-color] aspect-square overflow-hidden rounded-lg"
+                    <a class="hover:border-bg-blue w-[170px] flex-1 border-transparent border-2 border-solid transition-[border-color] aspect-square overflow-hidden rounded-lg"
                         href="https://pixey.org/radiquum" target="_blank" referrerpolicy="origin">
                         <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#353231]">
                             <img class="w-16 h-16 mx-auto" alt="" src="./static/assets/pixelfed.svg" />
                             <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-medium ">pixey.org</p>
-                                <p class="text-base font-light " data-i18n="LNK_PHOTO_PIXEY">See the photos like in instagram</p>
+                                <p class="text-2xl font-medium ">pixey</p>
+                                <p class="text-base font-light " data-i18n="LNK_PHOTO_PIXEY">See the photos like in
+                                    instagram</p>
                             </div>
                         </div>
                     </a>
-                    <a class="hover:border-bg-blue w-[170px] xs:flex-1 border-transparent border-2 border-solid transition-[border-color] aspect-square overflow-hidden rounded-lg"
+                    <a class="hover:border-bg-blue w-[170px] flex-1 border-transparent border-2 border-solid transition-[border-color] aspect-square overflow-hidden rounded-lg"
                         href="https://instafops.net/radiquwum" target="_blank" referrerpolicy="origin">
                         <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#353231]">
                             <img class="w-16 h-16 mx-auto" alt="" src="./static/assets/pixelfed.svg" />
                             <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-medium ">instafops.net</p>
-                                <p class="text-base font-light " data-i18n="LNK_PHOTO_INSTAFOPS">Photos that more furry related</p>
+                                <p class="text-2xl font-medium ">instafops</p>
+                                <p class="text-base font-light " data-i18n="LNK_PHOTO_INSTAFOPS">Photos that more furry
+                                    related</p>
                             </div>
                         </div>
                     </a>
                     <a class="hover:border-bg-blue border-transparent border-2 border-solid transition-[border-color] w-full aspect-[2/1] max-h-[182px] overflow-hidden rounded-lg"
-                        href="https://photos.wah.su/share/1bc2wt0jpNrv_zNzq50C5wfBKL6sKj8zPmU6pOYpK7d8hWKyaNWaFGkFD4-r5bcY7Q0" target="_blank" referrerpolicy="origin">
+                        href="https://photos.wah.su/share/1bc2wt0jpNrv_zNzq50C5wfBKL6sKj8zPmU6pOYpK7d8hWKyaNWaFGkFD4-r5bcY7Q0"
+                        target="_blank" referrerpolicy="origin">
                         <div class="flex items-center justify-center w-full h-full gap-4 p-4 text-white bg-[#615141]">
                             <img class="w-16 h-16" alt="" src="./static/assets/immich.png" />
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium " data-i18n="LNK_PHOTO_IMMICH_TITLE">Online Gallery</p>
-                                <p class="text-base font-light " data-i18n="LNK_PHOTO_IMMICH">Alternative versions and unreleased photos</p>
+                                <p class="text-base font-light " data-i18n="LNK_PHOTO_IMMICH">Alternative versions and
+                                    unreleased photos</p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="flex flex-wrap w-full gap-1">
+                <div class="flex flex-col w-full gap-1">
                     <div
                         class="w-full overflow-hidden border-2 border-transparent border-solid rounded-lg aspect-[2/1] max-h-[182px]">
                         <div class="relative flex items-end justify-end w-full h-full overflow-hidden" id="arts-image">
@@ -380,12 +386,13 @@
                             <img class="absolute inset-0 object-cover w-full h-full -z-10 translate-y-[var(--transform-y,0)] transition-transform ease-out duration-[var(--transform-duration,150ms)]"
                                 alt="" src="./static/assets/arts/art_newyear.jpg" data-section-image="arts"
                                 data-slide="9" data-photo="art_newyear" />
-                            <p
-                                class="font-bold text-4xl p-[8px] w-full h-full bg-black bg-opacity-20 flex items-end justify-end" data-i18n="LNK_ARTS_HEADER">
+                            <p class="font-bold text-4xl p-[8px] w-full h-full bg-black bg-opacity-20 flex items-end justify-end"
+                                data-i18n="LNK_ARTS_HEADER">
                                 ARTS</p>
                         </div>
                     </div>
-                    <a class="hover:border-bg-blue aspect-square w-[170px] xs:[flex-grow:1] border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                    <div class="grid [grid-template-columns:1fr_1fr] gap-1">
+                    <a class="hover:border-bg-blue aspect-square w-full border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
                         href="https://furaffinity.net/user/radiquum" target="_blank" referrerpolicy="origin">
                         <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#715b38]">
                             <img class="object-contain w-16 h-16 mx-auto" alt=""
@@ -396,7 +403,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                    <a class="hover:border-bg-blue w-full aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
                         href="https://itaku.ee/profile/radiquum" target="_blank" referrerpolicy="origin">
                         <div class="flex flex-col justify-around w-full h-full p-4 text-black bg-[#ffeb3c]">
                             <img class="object-contain w-16 h-16 mx-auto" alt="" src="./static/assets/itaku.png" />
@@ -406,40 +413,41 @@
                             </div>
                         </div>
                     </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-4">
-                <div class="flex flex-wrap w-full gap-1">
-                    <div
-                        class="w-full aspect-[2/1] border-transparent border-2 border-solid max-h-[182px] overflow-hidden rounded-lg">
-                        <div class="flex items-end justify-end w-full h-full bg-blue-500">
-                            <p class="font-bold text-4xl p-[8px]" data-i18n="LNK_SOCIALS_HEADER">SOCIAL MEDIA</p>
+            <div class="flex flex-col gap-1">
+                <div
+                    class="w-full aspect-[2/1] border-transparent border-2 border-solid max-h-[182px] overflow-hidden rounded-lg">
+                    <div class="flex items-end justify-end w-full h-full bg-blue-500">
+                        <p class="font-bold text-4xl p-[8px]" data-i18n="LNK_SOCIALS_HEADER">SOCIAL MEDIA</p>
+                    </div>
+                </div>
+                <a class="hover:border-bg-blue w-full aspect-[2/1] border-transparent border-2 border-solid transition-[border-color] max-h-[182px] overflow-hidden rounded-lg"
+                    href="https://furry.engineer/@radiquum" target="_blank" referrerpolicy="origin">
+                    <div class="flex items-center justify-center w-full h-full gap-4 p-4 text-white bg-[#3c72a1]">
+                        <img class="object-contain w-16 h-16" alt=""
+                            src="./static/assets/logos--mastodon-icon.svg" />
+                        <div class="flex flex-col gap-1">
+                            <p class="text-2xl font-medium ">Mastodon</p>
+                            <p class="text-base font-light break-words">@radiquum@furry.engineer</p>
                         </div>
                     </div>
-                    <a class="hover:border-bg-blue w-full aspect-[2/1] border-transparent border-2 border-solid transition-[border-color] max-h-[182px] overflow-hidden rounded-lg"
-                        href="https://furry.engineer/@radiquum" target="_blank" referrerpolicy="origin">
-                        <div class="flex items-center justify-center w-full h-full gap-4 p-4 text-white bg-[#3c72a1]">
-                            <img class="object-contain w-16 h-16" alt=""
-                                src="./static/assets/logos--mastodon-icon.svg" />
-                            <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-medium ">Mastodon</p>
-                                <p class="text-base font-light break-words">@radiquum@furry.engineer</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="hover:border-bg-blue aspect-square w-[170px] xs:[flex-grow:1] border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                </a>
+                <div class="grid [grid-template-columns:1fr_1fr] gap-1">
+                    <a class="hover:border-bg-blue w-full aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
                         href="https://bsky.app/profile/radiquum.wah.su" target="_blank" referrerpolicy="origin">
                         <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#05539f]">
                             <img class="object-contain w-16 h-16 mx-auto" alt=""
                                 src="./static/assets/Bluesky_Logo.png" />
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium ">Bluesky</p>
-                                <p class="text-base font-light ">@radiquum.wah.su</p>
+                                <p class="text-base font-light ">radiquum.wah.su</p>
                             </div>
                         </div>
                     </a>
-                    <a class="hover:border-bg-blue aspect-square w-[170px] xs:[flex-grow:1]  border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                    <a class="hover:border-bg-blue w-full aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
                         href="https://x.com/radiquum" target="_blank" referrerpolicy="origin">
                         <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#3b79a7]">
                             <img class="object-contain w-16 h-16 mx-auto" alt=""
@@ -450,7 +458,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="hover:border-bg-blue aspect-square w-[170px] xs:[flex-grow:1]  border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                    <a class="hover:border-bg-blue w-full aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
                         href="https://vk.com/radiquum" target="_blank" referrerpolicy="origin">
                         <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#1f6cc5]">
                             <img class="object-contain w-16 h-16 mx-auto" alt="" src="./static/assets/VKLogo.png" />
@@ -460,10 +468,11 @@
                             </div>
                         </div>
                     </a>
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                    <a class="hover:border-bg-blue w-full aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
                         href="https://t.me/radiquumprojects" target="_blank" referrerpolicy="origin">
                         <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#2f7ca3]">
-                            <img class="object-contain w-16 h-16 mx-auto" alt="" src="./static/assets/Telegram.png" />
+                            <img class="object-contain w-16 h-16 mx-auto" alt=""
+                                src="./static/assets/Telegram.png" />
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium">Radiquum Projects</p>
                             </div>
@@ -472,7 +481,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 sm:-mt-[var(--sm--mt)] lg:-mt-[var(--lg--mt)] xl:-mt-0" data-i18n-style="LNK_PROJECTS_STYLE" style="--sm--mt:0px; --lg--mt:686px;">
                 <div class="flex flex-wrap w-full gap-1">
                     <div
                         class="w-full aspect-[2/1] border-transparent border-2 border-solid max-h-[182px] overflow-hidden rounded-lg">
@@ -486,58 +495,67 @@
                             <img class="absolute inset-0 object-cover -z-10" alt="" src="./static/assets/ANIX.png" />
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium">Anix</p>
-                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_ANIX">Unofficial web client for Anixart android app,
+                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_ANIX">Unofficial web client for
+                                    Anixart android app,
                                     made in Next.JS</p>
                             </div>
                         </div>
                     </a>
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        href="https://github.com/Radiquum/TG-Photos" target="_blank" referrerpolicy="origin">
-                        <div
-                            class="bg-[#0E1621] text-white w-full h-full p-2 flex flex-col justify-around relative overflow-hidden -z-20">
-                            <img class="absolute [filter:darken(10%)] bottom-[50%] right-[15%] w-[173px] h-[100px] -z-10"
-                                alt="" src="./static/assets/TG_Photos.png" />
-                            <div class="flex flex-col justify-end h-full gap-1">
-                                <p class="text-2xl font-medium">TG-Photos</p>
-                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_TGP">Telegram bot to use telegram as a Google
-                                    Photo alternative</p>
+
+                    <div class="grid [grid-template-columns:1fr_1fr] gap-1">
+                        <a class="hover:border-bg-blue aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                            href="https://github.com/Radiquum/TG-Photos" target="_blank" referrerpolicy="origin">
+                            <div
+                                class="bg-[#0E1621] text-white w-full h-full p-2 flex flex-col justify-around relative overflow-hidden -z-20">
+                                <img class="absolute [filter:darken(10%)] bottom-[50%] right-[15%] w-[173px] h-[100px] -z-10"
+                                    alt="" src="./static/assets/TG_Photos.png" />
+                                <div class="flex flex-col justify-end h-full gap-1">
+                                    <p class="text-2xl font-medium">TG-Photos</p>
+                                    <p class="text-base font-light" data-i18n="LNK_PROJECTS_TGP">Telegram bot to use
+                                        telegram as a Google
+                                        Photo alternative</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        href="https://radiquum.github.io/WordGen" target="_blank" referrerpolicy="origin">
-                        <div
-                            class="bg-[#F5F5F5] text-black w-full h-full p-2 flex flex-col justify-around relative overflow-hidden">
-                            <img class="absolute [filter:darken(10%)] top-0 left-0 right-0 w-[170px] sm:w-[200px] object-cover"
-                                alt="" src="./static/assets/WordGen.png" />
-                            <div class="flex flex-col justify-end h-full gap-1">
-                                <p class="text-2xl font-medium">WordGen</p>
-                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_WG">Random word generator inspired by @tsoding
-                                </p>
+                        </a>
+                        <a class="hover:border-bg-blue aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                            href="https://radiquum.github.io/WordGen" target="_blank" referrerpolicy="origin">
+                            <div
+                                class="bg-[#F5F5F5] text-black w-full h-full p-2 flex flex-col justify-around relative overflow-hidden">
+                                <img class="absolute [filter:darken(10%)] top-0 left-0 right-0 w-[170px] sm:w-[200px] object-cover"
+                                    alt="" src="./static/assets/WordGen.png" />
+                                <div class="flex flex-col justify-end h-full gap-1">
+                                    <p class="text-2xl font-medium">WordGen</p>
+                                    <p class="text-base font-light" data-i18n="LNK_PROJECTS_WG">Random word generator
+                                        inspired by @tsoding
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        href="https://github.com/Radiquum/furaffinity-dl" target="_blank" referrerpolicy="origin">
-                        <div
-                            class="relative flex flex-col justify-around w-full h-full p-2 overflow-hidden text-white bg-black">
-                            <div class="flex flex-col justify-end h-full gap-1">
-                                <p class="text-2xl font-medium">furaffinity-dl</p>
-                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_FADL">Modification of the original project to
-                                    add more functionality</p>
+                        </a>
+                        <a class="hover:border-bg-blue aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                            href="https://github.com/Radiquum/furaffinity-dl" target="_blank" referrerpolicy="origin">
+                            <div
+                                class="relative flex flex-col justify-around w-full h-full p-2 overflow-hidden text-white bg-black">
+                                <div class="flex flex-col justify-end h-full gap-1">
+                                    <p class="text-2xl font-medium">furaffinity-dl</p>
+                                    <p class="text-base font-light" data-i18n="LNK_PROJECTS_FADL">Modification of the
+                                        original project to
+                                        add more functionality</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        href="https://github.com/Radiquum" target="_blank" referrerpolicy="origin">
-                        <div class="flex flex-col justify-around w-full h-full p-2 text-white bg-black">
-                            <img class="mx-auto w-14 h-14" alt="" src="./static/assets/github-mark-white.png" />
-                            <div class="flex flex-col justify-end gap-1">
-                                <p class="text-2xl font-medium">Github</p>
-                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_GITHUB">View my other repositories</p>
+                        </a>
+                        <a class="hover:border-bg-blue aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                            href="https://github.com/Radiquum" target="_blank" referrerpolicy="origin">
+                            <div class="flex flex-col justify-around w-full h-full p-2 text-white bg-black">
+                                <img class="mx-auto w-14 h-14" alt="" src="./static/assets/github-mark-white.png" />
+                                <div class="flex flex-col justify-end gap-1">
+                                    <p class="text-2xl font-medium">Github</p>
+                                    <p class="text-base font-light" data-i18n="LNK_PROJECTS_GITHUB">View my other
+                                        repositories</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+
                     <a class="hover:border-bg-blue group w-full aspect-[2/1] max-h-[182px] border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
                         href="https://home.wah.su" target="_blank" referrerpolicy="origin">
                         <div class="relative flex items-end w-full h-full px-2 py-4 overflow-hidden">
@@ -546,118 +564,124 @@
                             <div class="absolute inset-0 bg-black -z-20"></div>
                             <div class="flex flex-col gap-1">
                                 <p class="text-2xl font-medium">wah.su</p>
-                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_WAHSU">My Self-Hosting endeavor</p>
+                                <p class="text-base font-light" data-i18n="LNK_PROJECTS_WAHSU">My Self-Hosting endeavor
+                                </p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-4">
-                <div class="flex flex-wrap w-full gap-1">
+            <div class="flex flex-col gap-4 lg:[grid-column:span_2] lg:flex-row xl:flex-col xl:[grid-column:4] sm:-mt-[var(--sm--mt)] lg:-mt-[var(--lg--mt)] xl:-mt-0 -z-10" data-i18n-style="LNK_CONTFRIEN_STYLE" style="--sm--mt:572px; --lg--mt:0px;">
+                <div class="flex flex-col w-full gap-1">
                     <div
                         class="w-full aspect-[2/1] border-transparent border-2 border-solid max-h-[182px] overflow-hidden rounded-lg">
                         <div class="flex items-end justify-end w-full h-full bg-pink-600">
                             <p class="font-bold text-4xl p-[8px]" data-i18n="LNK_CONTACT_HEADER">CONTACT</p>
                         </div>
                     </div>
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        href="https://t.me/radiquum" target="_blank" referrerpolicy="origin">
-                        <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#2f7ca3]">
-                            <img class="object-contain w-16 h-16 mx-auto" alt="" src="./static/assets/Telegram.png" />
-                            <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-medium">Telegram</p>
-                                <p class="text-base font-light">@radiquum</p>
+                    <div class="grid [grid-template-columns:1fr_1fr] gap-1">
+                        <a class="hover:border-bg-blue aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg w-full h-full"
+                            href="https://t.me/radiquum" target="_blank" referrerpolicy="origin">
+                            <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#2f7ca3]">
+                                <img class="object-contain w-16 h-16 mx-auto" alt=""
+                                    src="./static/assets/Telegram.png" />
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-2xl font-medium">Telegram</p>
+                                    <p class="text-base font-light">@radiquum</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        href="https://matrix.to/#/@radiquum:wah.su" target="_blank" referrerpolicy="origin">
-                        <div class="flex flex-col justify-around w-full h-full p-4 text-black bg-white">
-                            <img class="object-contain w-16 h-16 mx-auto" alt=""
-                                src="./static/assets/matrix-favicon.svg" />
-                            <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-medium">Matrix</p>
-                                <p class="text-base font-light">@radiquum:wah.su
-                                </p>
+                        </a>
+                        <a class="hover:border-bg-blue aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg w-full h-full"
+                            href="https://matrix.to/#/@radiquum:wah.su" target="_blank" referrerpolicy="origin">
+                            <div class="flex flex-col justify-around w-full h-full p-4 text-black bg-white">
+                                <img class="object-contain w-16 h-16 mx-auto" alt=""
+                                    src="./static/assets/matrix-favicon.svg" />
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-2xl font-medium">Matrix</p>
+                                    <p class="text-base font-light">@radiquum:wah.su
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        href="https://vk.com/radiquum" target="_blank" referrerpolicy="origin">
-                        <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#1f6cc5]">
-                            <img class="object-contain w-16 h-16 mx-auto" alt="" src="./static/assets/VKLogo.png" />
-                            <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-medium">VKontakte</p>
-                                <p class="text-base font-light">radiquum</p>
+                        </a>
+                        <a class="hover:border-bg-blue aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg w-full h-full"
+                            href="https://vk.com/radiquum" target="_blank" referrerpolicy="origin">
+                            <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#1f6cc5]">
+                                <img class="object-contain w-16 h-16 mx-auto" alt="" src="./static/assets/VKLogo.png" />
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-2xl font-medium">VKontakte</p>
+                                    <p class="text-base font-light">radiquum</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        target="_blank" referrerpolicy="origin">
-                        <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#2d347e]">
-                            <img class="object-contain w-16 h-16 mx-auto" alt=""
-                                src="./static/assets/discord-mark-blue.png" />
-                            <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-medium">Discord</p>
-                                <p class="text-base font-light">radiquum</p>
+                        </a>
+                        <a class="w-full h-full overflow-hidden rounded-lg aspect-square" target="_blank" referrerpolicy="origin">
+                            <div class="flex flex-col justify-around w-full h-full p-4 text-white bg-[#2d347e]">
+                                <img class="object-contain w-16 h-16 mx-auto" alt=""
+                                    src="./static/assets/discord-mark-blue.png" />
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-2xl font-medium">Discord</p>
+                                    <p class="text-base font-light">radiquum</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-                <div class="flex flex-wrap w-full gap-1">
-                    <div class="flex flex-col gap-4">
-                        <div
-                            class="w-full aspect-[2/1] border-transparent border-2 border-solid max-h-[182px] overflow-hidden rounded-lg">
-                            <div class="flex items-end justify-end w-full h-full bg-orange-400">
-                                <p class="font-bold text-4xl p-[8px] text-right" data-i18n="LNK_FRIEND_HEADER">COLLECTIONS & FRIENDS</p>
-                            </div>
+                <div class="flex flex-col w-full gap-1 sm:-mt-[var(--sm--mt)] lg:-mt-[var(--lg--mt)] xl:-mt-0" data-i18n-style="LNK_FRIEN_STYLE" style="--sm--mt:0px; --lg--mt:500px;">
+                    <div
+                        class="w-full aspect-[2/1] border-transparent border-2 border-solid max-h-[182px] overflow-hidden rounded-lg">
+                        <div class="flex items-end justify-end w-full h-full bg-orange-400">
+                            <p class="font-bold text-4xl p-[8px] text-right" data-i18n="LNK_FRIEND_HEADER">
+                                COLLECTIONS & FRIENDS</p>
                         </div>
                     </div>
-
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        href="https://t.me/red_panda_stickers" target="_blank" referrerpolicy="origin">
-                        <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
-                            <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-medium">Red Pandas Stickers</p>
-                                <p class="text-base font-light" data-i18n="LNK_COLLECTION_RPS">Telegram channel with red panda
-                                    sticker packs</p>
+                    <div class="grid [grid-template-columns:1fr_1fr] gap-1">
+                        <a class="hover:border-bg-blue aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                            href="https://t.me/red_panda_stickers" target="_blank" referrerpolicy="origin">
+                            <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-2xl font-medium">Red Pandas Stickers</p>
+                                    <p class="text-base font-light" data-i18n="LNK_COLLECTION_RPS">Telegram channel with
+                                        red
+                                        panda
+                                        sticker packs</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        href="https://wahs.wah.su" target="_blank" referrerpolicy="origin">
-                        <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
-                            <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-medium">Red Panda Images</p>
-                                <p class="text-base font-light" data-i18n="LNK_COLLECTION_RPI">3000+ Photos and Videos of a red pandas</p>
+                        </a>
+                        <a class="hover:border-bg-blue aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                            href="https://wahs.wah.su" target="_blank" referrerpolicy="origin">
+                            <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-2xl font-medium">Red Panda Images</p>
+                                    <p class="text-base font-light" data-i18n="LNK_COLLECTION_RPI">3000+ Photos and
+                                        Videos
+                                        of a red pandas</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        href="https://vk.com/blepstash" target="_blank" referrerpolicy="origin">
-                        <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
-                            <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-medium">blep stash</p>
-                                <p class="text-base font-light" data-i18n="LNK_FRIEND_BLEP">VK Group of a photographer.
-                                    City and
-                                    Trains photography</p>
+                        </a>
+                        <a class="hover:border-bg-blue aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                            href="https://vk.com/blepstash" target="_blank" referrerpolicy="origin">
+                            <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-2xl font-medium">blep stash</p>
+                                    <p class="text-base font-light" data-i18n="LNK_FRIEND_BLEP">VK Group of a
+                                        photographer.
+                                        City and
+                                        Trains photography</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-
-                    <a class="hover:border-bg-blue w-[170px] xs:[flex-grow:1] aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
-                        href="https://github.com/itc1205" target="_blank" referrerpolicy="origin">
-                        <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
-                            <div class="flex flex-col gap-1">
-                                <p class="text-2xl font-medium">itc1205</p>
-                                <p class="text-base font-light" data-i18n="LNK_FRIEND_ITC">Github profile of another furry
-                                    programmer</p>
+                        </a>
+                        <a class="hover:border-bg-blue aspect-square border-transparent border-2 border-solid transition-[border-color] overflow-hidden rounded-lg"
+                            href="https://github.com/itc1205" target="_blank" referrerpolicy="origin">
+                            <div class="flex items-end w-full h-full gap-2 p-4 text-black bg-white">
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-2xl font-medium">itc1205</p>
+                                    <p class="text-base font-light" data-i18n="LNK_FRIEND_ITC">Github profile of another
+                                        furry
+                                        programmer</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
