@@ -8,7 +8,7 @@ const i18n_ru = {
   QUICK_BIO_CODER: "Программист",
   QUICK_BIO_PHOTOGRAPHER: "Фотограф",
   QUICK_BIO_ENTHUSIAST: "Селф-Хостинг Энтузиаст",
-  QUICK_BIO_LASTFM: "Сейчас слушает: ",
+  QUICK_BIO_LASTFM: "Мой профиль",
 
   // BUTTONS
   BTN_ABOUT_ME: "ОБО МНЕ",

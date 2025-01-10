@@ -98,12 +98,23 @@
                     class="inline sm:hidden">.</span></a>
         </div>
 
-        <p
-            class="flex flex-col flex-wrap items-center justify-center order-4 gap-2 px-2 text-2xl text-white sm:flex-row md:order-3">
-            <span data-i18n="QUICK_BIO_LASTFM">Now listening to:</span> <a class="text-bg-pink hover:underline"
-                href="https://last.fm/user/radiquum" id="track-name" target="_blank" referrerpolicy="origin">LOADING . .
-                .</a>
-        </p>
+        <div class="relative order-4 h-24 md:order-3 min-w-[372px] max-w-[512px] mx-auto">
+            <img id="lastfm_image" src="https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png" alt="" class="absolute object-cover inset-0 w-full max-h-[calc(100%+16px)] md:-z-10" />
+            <div class="flex gap-4 p-2 text-white bg-black bg-opacity-75 backdrop-blur-md">
+                <img id="lastfm_image" src="https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png" alt="" class="w-24 h-24" />
+                <div>
+                    <a id="lastfm_songlink" class="block">
+                        <span class="flex items-center justify-start gap-1 -ml-1"><img src="./static/material-symbols--pause.svg" alt="Paused" class="h-6 invert" id="lastfm_state" /><p id="lastfm_title" class="overflow-hidden text-xl truncate text-nowrap whitespace-nowrap">Loading...</p></span>
+                        <p id="lastfm_artist" class="overflow-hidden text-sm truncate text-nowrap whitespace-nowrap"></p>
+                        <p id="lastfm_album" class="overflow-hidden text-sm truncate text-nowrap whitespace-nowrap"></p>
+                    </a>
+                    <a href="https://www.last.fm/user/Radiquum" class="flex items-center gap-2 mt-2 text-white">
+                        <img src="./static/fa6-brands--lastfm.svg" alt="" class="w-6 h-6 invert"/>
+                        <span data-i18n="QUICK_BIO_LASTFM">My profile</span>
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <div
             class="flex flex-row flex-wrap items-center justify-center order-3 gap-8 py-4 -mt-4 text-white md:mt-auto md:order-4">

@@ -1,6 +1,5 @@
 // Animation durations in ms
 const SONG_CHANGE_DELAY = 180000;
-const SYMBOL_DELAY = 150;
 
 const IMAGE_CHANGE_DELAY = 6000;
 const ARTS_CHANGE_DELAY = 6500;
@@ -10,59 +9,14 @@ const IMAGE_TRANSITION_DELAY = 1000;
 // Header percentages
 const HEADER_ACTIVATION_PERCENT = 0.8;
 
-// THIS IS NOT CONSTANTS, BUT A GLOBAL VAR FOR TIMERS IN SONG NAME CHANGE!!!
-let DELETE_INTERVAL = null;
-let UPDATE_INTERVAL = null;
-function deletePreviousTrack(newTrackName) {
-  const trackName = document.getElementById("track-name");
-  const prevTrackNameLen = trackName.innerHTML.length;
-  trackName.style.setProperty("--cursor-animation", "none");
-  clearInterval(DELETE_INTERVAL);
-  clearInterval(UPDATE_INTERVAL);
-
-  let removed = 0;
-  DELETE_INTERVAL = setInterval(() => {
-    removed += 1;
-    trackName.innerHTML = trackName.innerHTML.substring(
-      0,
-      prevTrackNameLen - removed
-    );
-
-    if (removed == prevTrackNameLen) {
-      clearInterval(DELETE_INTERVAL);
-      updateTrack(newTrackName);
-      return true;
-    }
-  }, SYMBOL_DELAY);
-}
-
-function updateTrack(newTrackName) {
-  const trackName = document.getElementById("track-name");
-  const TrackNameLen = newTrackName.length;
-  clearInterval(DELETE_INTERVAL);
-  clearInterval(UPDATE_INTERVAL);
-
-  let added = 0;
-  UPDATE_INTERVAL = setInterval(() => {
-    if (added < TrackNameLen) {
-      trackName.innerHTML += newTrackName[added];
-      added += 1;
-    }
-
-    if (added == TrackNameLen) {
-      clearInterval(UPDATE_INTERVAL);
-      trackName.style.setProperty("--cursor-animation", "blink");
-      setTimeout(() => {
-        trackName.style.setProperty("--cursor-color", "transparent");
-      }, SYMBOL_DELAY * 3);
-      return true;
-    }
-  }, SYMBOL_DELAY);
-}
-
 async function updatePlayingTrack() {
-  const trackName = document.getElementById("track-name");
-  const prevTrackName = trackName.innerHTML;
+
+  const images = document.querySelectorAll("#lastfm_image");
+  const state = document.getElementById("lastfm_state");
+  const title = document.getElementById("lastfm_title");
+  const artist = document.getElementById("lastfm_artist");
+  const album = document.getElementById("lastfm_album");
+  const link = document.getElementById("lastfm_songlink");
 
   fetch("https://lastfm-last-played.biancarosa.com.br/radiquum/latest-song")
     .then((res) => {
@@ -73,21 +27,39 @@ async function updatePlayingTrack() {
     })
     .then((data) => {
       if (
-        prevTrackName != `${data.track.artist["#text"]} - ${data.track.name}`
+        title.innerHTML != data.track.name
       ) {
-        trackName.style.setProperty("--cursor-color", "#fff");
-        trackName.style.setProperty("--cursor-animation", "blink");
 
-        setTimeout(() => {
-          deletePreviousTrack(
-            `${data.track.artist["#text"]} - ${data.track.name}`
-          );
-        }, SYMBOL_DELAY * 4);
+        if (!data.track) throw new Error("No track is provided");
+        if (data.track.hasOwnProperty("image") && data.track.image.length > 0) {
+          images.forEach((img) => {img.src = data.track.image[data.track.image.length - 1]["#text"]});
+        } else {
+          images.forEach((img) => {img.src = "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png"});
+        }
+        if (data.track.hasOwnProperty("@attr") && data.track["@attr"].nowplaying) {
+          state.src = "./static/material-symbols--play-arrow.svg";
+          state.alt = "Playing";
+        } else {
+          state.src = "./static/material-symbols--pause.svg";
+          state.alt = "Paused";
+        }
+        if (data.track.hasOwnProperty("album")) {
+          album.innerHTML = data.track.album["#text"];
+        } else {
+          album.innerHTML = "";
+        }
+        if (data.track.hasOwnProperty("artist")) {
+          artist.innerHTML = data.track.artist["#text"];
+        } else {
+          artist.innerHTML = "";
+        }
+        title.innerHTML = data.track.name;
+        link.href = data.track.url
       }
     })
     .catch((err) => {
-      deletePreviousTrack("ERROR: last.fm is not reachable");
-      console.log(err);
+      console.log("lastfm is unreachable:", err);
+      return
     });
 }
 
@@ -235,7 +207,7 @@ function changeArtsSectionImage() {
 
 window.onload = () => {
   updatePlayingTrack();
-  setInterval(updatePlayingTrack, 180000);
+  setInterval(updatePlayingTrack, SONG_CHANGE_DELAY);
   setPhotoSectionImagesMargin();
   setInterval(changePhotoSectionImage, IMAGE_CHANGE_DELAY);
   setArtsSectionImagesMargin();
