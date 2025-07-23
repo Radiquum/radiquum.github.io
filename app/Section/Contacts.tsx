@@ -37,7 +37,7 @@ export const Contacts = () => {
         {links.map((item) => {
           if (item.url) {
             return (
-              <Link href={item.url} key={`socials.link.${item.text}`}>
+              <Link href={item.url} key={`contacts.link.${item.text}`}>
                 <IconWithText
                   icon={item.icon}
                   text={item.text}

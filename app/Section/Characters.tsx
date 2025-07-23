@@ -23,9 +23,9 @@ export const Characters = () => {
     <Section>
       <div className="flex flex-col gap-2 mt-2 md:flex-row md:justify-between md:items-center">
         <h2 className="text-4xl md:text-5xl">Characters</h2>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 xl:gap-8">
           {links.map((item) => (
-            <Link href={item.url} key={`photos.link.${item.text}`}>
+            <Link href={item.url} key={`characters.link.${item.text}`}>
               <IconWithText
                 icon={item.icon}
                 text={item.text}

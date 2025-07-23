@@ -42,7 +42,7 @@ export const Photos = () => {
       <Section>
         <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-center">
           <h2 className="text-4xl md:text-5xl">Photos</h2>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 xl:gap-8">
             {links.map((item) => (
               <Link href={item.url} key={`photos.link.${item.text}`}>
                 <IconWithText

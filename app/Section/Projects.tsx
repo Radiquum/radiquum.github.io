@@ -53,7 +53,7 @@ export const Projects = () => {
       <h2 className="text-4xl md:text-5xl">Projects</h2>
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3">
         {links.map((item) => (
-          <Link href={item.url} key={`socials.link.${item.text}`}>
+          <Link href={item.url} key={`projects.link.${item.text}`}>
             <IconWithText icon={item.icon} text={item.text} desc={item.desc} />
           </Link>
         ))}

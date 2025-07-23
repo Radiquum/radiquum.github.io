@@ -6,7 +6,7 @@ type IconWithTextProps = {
 
 export const IconWithText = ({ icon, text, desc }: IconWithTextProps) => {
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-1 hover:text-[#c8e8fe] transition-colors">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={icon} alt={""} />
       <div>
