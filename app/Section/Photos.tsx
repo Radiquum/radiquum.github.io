@@ -11,13 +11,13 @@ const links = [
     icon: "/icons/ic_baseline-telegram.svg",
     text: "Telegram",
     desc: "@photowah",
-    url: "https://x.com/radiquum",
+    url: "https://t.me/photowah",
   },
   {
     icon: "/icons/simple-icons_immich.svg",
     text: "Gallery",
     desc: "wah.su/photos",
-    url: "https://bsky.app/profile/@radiquum.wah.su",
+    url: "https://wah.su/photos",
   },
 ];
 

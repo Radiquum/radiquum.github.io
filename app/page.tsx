@@ -14,7 +14,7 @@ export default function Home() {
         <Photos />
         <Projects />
       </div>
-      <div className="flex flex-col gap-8 md:gap-16 overflow-hidden bg-[#131314] rounded-t-4xl md:rounded-t-[128px] pt-4 md:pt-8 pb-8 md:pb-16">
+      <div className="flex flex-col gap-8 md:gap-16 overflow-hidden bg-[#131314] rounded-t-4xl md:rounded-t-[128px] pt-4 md:pt-8 pb-8 md:pb-16 xl:rounded-t-4xl 2xl:rounded-t-[128px]">
         <Characters />
         <Contacts />
       </div>

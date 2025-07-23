@@ -49,7 +49,7 @@ export const Characters = () => {
           image="/images/protogen.png"
         />
       </div>
-      <div className="flex-col gap-8 mt-2 hidden md:flex">
+      <div className="flex-col gap-8 mt-2 hidden md:flex relative">
         <div className="flex gap-4">
           <CharacterImage
             name="Kentai"
@@ -66,17 +66,45 @@ export const Characters = () => {
               about
             </button>
           </div>
+          <div className="ml-21 hidden xl:block">
+            <img
+              className="rounded-4xl w-[372px] h-[288px] object-cover"
+              src="/images/red_panda2.png"
+              alt=""
+            />
+          </div>
+          <div className="hidden xl:block absolute -right-72">
+            <img
+              className="rounded-4xl w-[372px] h-[288px] object-cover"
+              src="/images/red_panda3.png"
+              alt=""
+            />
+          </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 xl:flex-row-reverse">
           <CharacterImage
             name=""
             species="Protogen"
             gender="Male"
             image="/images/protogen.png"
           />
-          <div className="flex flex-col">
+          <div className="flex flex-col xl:text-right">
             <p className="mt-2 text-3xl">Protogen</p>
             <p className="text-3xl">Male</p>
+          </div>
+          <div className="mr-16 hidden xl:block">
+            <img
+              className="rounded-4xl w-[372px] h-[288px] object-cover"
+              src="/images/protogen2.png"
+              alt=""
+            />
+          </div>
+          <div className="ml-10 hidden xl:block absolute -left-72">
+            <img
+              className="rounded-4xl w-[372px] h-[288px] object-cover"
+              src="/images/protogen3.png"
+              alt=""
+            />
           </div>
         </div>
       </div>

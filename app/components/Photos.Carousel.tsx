@@ -97,7 +97,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                   <img
                     className="embla__slide__img embla__parallax__img"
                     src={index}
-                    alt="Your alt text"
+                    alt=""
                   />
                 </div>
               </div>
