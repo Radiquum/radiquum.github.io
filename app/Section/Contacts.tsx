@@ -32,8 +32,8 @@ const links = [
 export const Contacts = () => {
   return (
     <Section>
-      <h2 className="text-4xl">Contacts</h2>
-      <div className="grid grid-cols-2 gap-4">
+      <h2 className="text-4xl md:text-5xl">Contacts</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {links.map((item) => {
           if (item.url) {
             return (

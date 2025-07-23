@@ -41,7 +41,7 @@ body {
 /* embla styles */
 
 .embla {
-  max-width: 48rem;
+  max-width: 100%;
   margin: auto;
   --slide-height: 144px;
   --slide-spacing: 8px;
@@ -86,4 +86,12 @@ body {
   flex: 0 0 calc(115% + (var(--slide-spacing) * 2));
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .embla {
+    --slide-height: 288px;
+    --slide-spacing: 16px;
+    --slide-size: 512px;
+  }
 }
