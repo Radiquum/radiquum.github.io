@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { IconWithText } from "../components/IconWithText";
 import { Section } from "../components/Section";
 import { CharacterImage } from "../components/CharacterImage";
+
+import { useInView } from "motion/react"
+import { useEffect, useRef } from "react";
 
 const links = [
   {
@@ -19,6 +24,12 @@ const links = [
 ];
 
 export const Characters = () => {
+
+  const imagesRedPandaRef = useRef(null)
+  const imagesRedPandaIsInView = useInView(imagesRedPandaRef, { once: true })
+  const imagesProtogenRef = useRef(null)
+  const imagesProtogenIsInView = useInView(imagesProtogenRef, { once: true })
+
   return (
     <Section>
       <div className="flex flex-col gap-2 mt-2 md:flex-row md:justify-between md:items-center">
@@ -59,23 +70,21 @@ export const Characters = () => {
           />
           <div className="flex flex-col">
             <p className="text-5xl">Kentai</p>
-            <p className="mt-2 text-3xl">Red Panda</p>
+            <p className="mt-2 text-3xl" ref={imagesRedPandaRef}>Red Panda</p>
             <p className="text-3xl">Male</p>
             <div className="flex-1"></div>
             <button className="rounded-full bg-[#491f1f] px-4 py-2 text-3xl">
               about
             </button>
           </div>
-          <div className="ml-21 hidden xl:block">
+          <div className="top-0 left-[488px] absolute hidden xl:flex gap-4 transition-transform duration-1000 ease-out" style={{ transform: !imagesRedPandaIsInView ? "translateX(100vw)" : "translateX(0)" }}>
             <img
-              className="rounded-4xl w-[372px] h-[288px] object-cover"
+              className="rounded-4xl w-[372px] h-[288px] object-cover flex-shrink-0"
               src="/images/red_panda2.png"
               alt=""
             />
-          </div>
-          <div className="hidden xl:block absolute -right-72">
             <img
-              className="rounded-4xl w-[372px] h-[288px] object-cover"
+              className="rounded-4xl w-[372px] h-[288px] object-cover flex-shrink-0"
               src="/images/red_panda3.png"
               alt=""
             />
@@ -90,19 +99,17 @@ export const Characters = () => {
           />
           <div className="flex flex-col xl:text-right">
             <p className="mt-2 text-3xl">Protogen</p>
-            <p className="text-3xl">Male</p>
+            <p className="text-3xl" ref={imagesProtogenRef}>Male</p>
           </div>
-          <div className="mr-16 hidden xl:block">
+          <div className="bottom-0 right-[488px] absolute hidden xl:flex gap-4 transition-transform duration-1000 ease-out" style={{ transform: !imagesProtogenIsInView ? "translateX(-100vw)" : "translateX(0)" }}>
             <img
-              className="rounded-4xl w-[372px] h-[288px] object-cover"
-              src="/images/protogen2.png"
+              className="rounded-4xl w-[372px] h-[288px] object-cover flex-shrink-0"
+              src="/images/protogen3.png"
               alt=""
             />
-          </div>
-          <div className="ml-10 hidden xl:block absolute -left-72">
             <img
-              className="rounded-4xl w-[372px] h-[288px] object-cover"
-              src="/images/protogen3.png"
+              className="rounded-4xl w-[372px] h-[288px] object-cover flex-shrink-0"
+              src="/images/protogen2.png"
               alt=""
             />
           </div>
