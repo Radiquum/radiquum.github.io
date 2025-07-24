@@ -42,7 +42,7 @@ const links = [
   {
     icon: "/icons/ic_baseline-telegram.svg",
     text: "Red Pandas Stickers",
-    desc: "Collection of Red Panda related sticker packs",
+    desc: "Collection of Red Panda sticker packs",
     url: "https://t.me/red_panda_stickers",
   },
 ];
@@ -50,7 +50,7 @@ const links = [
 export const Projects = () => {
   return (
     <Section>
-      <h2 className="text-4xl md:text-5xl">Projects</h2>
+      <h2 className="text-4xl md:text-5xl border-1 px-3 py-2 rounded-xl border-white/5 bg-[#101316]/5">Projects</h2>
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3">
         {links.map((item) => (
           <Link href={item.url} key={`projects.link.${item.text}`}>

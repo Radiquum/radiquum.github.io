@@ -32,8 +32,8 @@ const links = [
 export const Contacts = () => {
   return (
     <Section>
-      <h2 className="text-4xl md:text-5xl">Contacts</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+      <h2 className="text-4xl md:text-5xl border-1 px-3 py-2 rounded-xl border-white/5 bg-[#1c1e20]/25">Contacts</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2">
         {links.map((item) => {
           if (item.url) {
             return (
@@ -42,6 +42,7 @@ export const Contacts = () => {
                   icon={item.icon}
                   text={item.text}
                   desc={item.desc}
+                  backgroundColor={"#1c1e20"}
                 />
               </Link>
             );
@@ -52,6 +53,7 @@ export const Contacts = () => {
                 icon={item.icon}
                 text={item.text}
                 desc={item.desc}
+                backgroundColor={"#1c1e20"}
               />
             );
           }

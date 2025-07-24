@@ -4,6 +4,7 @@ import { Footer } from "./Section/Footer";
 import { Intro } from "./Section/Intro";
 import { Photos } from "./Section/Photos";
 import { Projects } from "./Section/Projects";
+import { Skills } from "./Section/Skills";
 import { Socials } from "./Section/Socials";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
           <Intro />
           <Socials />
           <Photos />
+          <Skills />
           <Projects />
         </div>
         <div className="flex flex-col gap-8 md:gap-16 overflow-hidden bg-[#131314] rounded-t-4xl md:rounded-t-[128px] pt-4 md:pt-8 pb-8 md:pb-16 xl:rounded-t-4xl 2xl:rounded-t-[128px]">

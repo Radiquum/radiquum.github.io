@@ -50,8 +50,8 @@ const links = [
 export const Socials = () => {
   return (
     <Section>
-      <h2 className="text-4xl md:text-5xl">Socials</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-12 gap-y-2">
+      <h2 className="text-4xl md:text-5xl border-1 px-3 py-2 rounded-xl border-white/5 bg-[#ffb1cd]/5">Socials</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2">
         {links.map((item) => (
           <Link href={item.url} key={`socials.link.${item.text}`}>
             <IconWithText icon={item.icon} text={item.text} desc={item.desc} />

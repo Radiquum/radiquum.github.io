@@ -33,14 +33,15 @@ export const Characters = () => {
   return (
     <Section>
       <div className="flex flex-col gap-2 mt-2 md:flex-row md:justify-between md:items-center">
-        <h2 className="text-4xl md:text-5xl">Characters</h2>
-        <div className="flex items-center gap-4 xl:gap-8">
+        <h2 className="text-4xl md:text-5xl border-1 px-3 py-2 rounded-xl border-white/5 bg-[#1c1e20]/25 flex-1">Characters</h2>
+        <div className="flex items-center gap-2 flex-1">
           {links.map((item) => (
-            <Link href={item.url} key={`characters.link.${item.text}`}>
+            <Link href={item.url} key={`characters.link.${item.text}`} className="flex-1">
               <IconWithText
                 icon={item.icon}
                 text={item.text}
                 desc={item.desc}
+                backgroundColor={"#1c1e20"}
               />
             </Link>
           ))}
