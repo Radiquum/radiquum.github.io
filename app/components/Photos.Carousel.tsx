@@ -90,18 +90,24 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
+          {slides.map((item, index) => (
+            <button
+              className="embla__slide"
+              onClick={() => {
+                if (emblaApi) emblaApi.scrollTo(index);
+              }}
+              key={`embla.slide.${index}`}
+            >
               <div className="embla__parallax">
                 <div className="embla__parallax__layer">
                   <img
                     className="embla__slide__img embla__parallax__img"
-                    src={index}
+                    src={item}
                     alt=""
                   />
                 </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

@@ -21,7 +21,7 @@ const links = [
   },
 ];
 
-const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
+const OPTIONS: EmblaOptionsType = { loop: true};
 const SLIDES = [
   "/images/photos/2024-06-14T19_32_04_024.JPG",
   "/images/photos/2024-06-17T18_55_55_030.JPG",
