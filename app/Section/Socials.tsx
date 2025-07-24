@@ -51,7 +51,7 @@ export const Socials = () => {
   return (
     <Section>
       <h2 className="text-4xl md:text-5xl">Socials</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-12 gap-y-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-12 gap-y-2">
         {links.map((item) => (
           <Link href={item.url} key={`socials.link.${item.text}`}>
             <IconWithText icon={item.icon} text={item.text} desc={item.desc} />

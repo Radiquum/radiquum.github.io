@@ -2,7 +2,7 @@ export const Intro = () => {
   return (
     <div className="flex gap-4 flex-col xl:gap-8">
       <div className="w-full flex items-center justify-center py-24 bg-[#101316] rounded-tl-[256px] rounded-br-[256px]">
-        <h1 className="text-[#FFB1CD] tracking-tight font-bold text-8xl md:text-[128px] xl:text-[200px] 2xl:text-[232px]">
+        <h1 className="text-[#FFB1CD] tracking-tight font-bold text-[90px] text-center md:text-[128px] xl:text-[200px] 2xl:text-[232px]">
           Radiquum
         </h1>
       </div>
