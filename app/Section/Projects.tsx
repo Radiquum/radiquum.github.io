@@ -54,7 +54,7 @@ export const Projects = () => {
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3">
         {links.map((item) => (
           <Link href={item.url} key={`projects.link.${item.text}`}>
-            <IconWithText icon={item.icon} text={item.text} desc={item.desc} />
+            <IconWithText icon={item.icon} text={item.text} desc={item.desc} backgroundColor={"#101316"} backgroundOpacity={"5%"} />
           </Link>
         ))}
       </div>
