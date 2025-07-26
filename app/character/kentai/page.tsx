@@ -1,9 +1,27 @@
 /* eslint-disable @next/next/no-img-element */
+import type { Metadata } from "next";
 import { CharacterColor } from "@/app/components/CharacterColor";
 import Link from "next/link";
 const CharacterColors = {
   Body: ["#ffb1ce", "#91d1fd", "#ffffff"],
   Clothes: ["#492020", "#1c1a1d", "#39373b", "#494749", "#69676a", "#98959a"],
+};
+
+export const metadata: Metadata = {
+  title: "Kentai Radiquum",
+  description:
+    "Character page. \
+    Kentai is a friendly yet introverted red panda who values his quiet space and prefers meaningful interactions over large crowds. \
+    Curious by nature and sharp-minded, he has a deep love for technology and is always eager to explore something new. While he keeps a low profile, those close to him know him as thoughtful, creative, and quietly expressive.",
+  openGraph: {
+    images: [
+      {
+        url: "https://radiquum.wah.su/characters/kentai_redpanda_thumb.jpg",
+        width: 1120,
+        height: 800,
+      },
+    ],
+  },
 };
 
 export default function CharacterKentai() {
