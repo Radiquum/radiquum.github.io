@@ -126,7 +126,7 @@ export const Characters = () => {
             </p>
           </div>
           <div
-            className="bottom-0 right-[488px] absolute hidden xl:flex gap-4 transition-transform duration-1000 ease-out"
+            className="bottom-0 left-[-228px] absolute hidden xl:flex gap-4 transition-transform duration-1000 ease-out"
             style={{
               transform: !imagesProtogenIsInView
                 ? "translateX(-100vw)"
