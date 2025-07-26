@@ -13,7 +13,7 @@ const links = [
     icon: "/icons/ri_bluesky-fill.svg",
     text: "BlueSky",
     desc: "@radiquum.wah.su",
-    url: "https://bsky.app/profile/@radiquum.wah.su",
+    url: "https://bsky.app/profile/radiquum.wah.su",
   },
   {
     icon: "/icons/mdi_mastodon.svg",
@@ -43,7 +43,7 @@ const links = [
     icon: "/icons/ri_pixelfed-fill.svg",
     text: "Instafops",
     desc: "@radiquwum@Instafops.net",
-    url: "https://instafops.net/@radiquum",
+    url: "https://instafops.net/@radiquwum",
   },
 ];
 
