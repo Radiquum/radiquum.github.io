@@ -10,35 +10,13 @@ export const Intro = () => {
   }, []);
 
   return (
-    <div className="flex gap-4 flex-col xl:gap-8">
-      <div className="w-full flex items-center justify-center py-24 bg-[#101316] rounded-tl-[256px] rounded-br-[256px]">
-        <h1 className="text-[#FFB1CD] tracking-tight font-bold text-[80px] text-center md:text-[128px] xl:text-[200px]">
-          Radiquum
-        </h1>
-      </div>
-      <div className="w-full flex items-center justify-center py-24 bg-[#161213] rounded-bl-[128px] rounded-tr-[128px] md:rounded-bl-[256px] md:rounded-tr-[256px] overflow-hidden">
-        <div className="flex flex-col md:flex-row md:gap-8 md:flex-wrap md:justify-center 2xl:gap-16">
-          <p
-            className={`text-[#C8E8FE] ${
-              isAnimated ? "translate-y-0" : "translate-y-64 md:translate-y-96"
-            } font-medium text-4xl md:text-5xl xl:text-8xl transition-transform duration-1000 ease-out`}
-          >
-            Photographer
-          </p>
-          <p
-            className={`text-[#FF8686] ${
-              isAnimated ? "translate-y-0" : "translate-y-64 md:translate-y-96"
-            } font-medium text-4xl md:text-5xl xl:text-8xl transition-transform delay-150 duration-1000 ease-out`}
-          >
-            Developer
-          </p>
-          <p
-            className={`text-[#FF851A] ${
-              isAnimated ? "translate-y-0" : "translate-y-64 md:translate-y-96"
-            } font-medium text-4xl md:text-5xl xl:text-8xl transition-transform delay-300 duration-1000 ease-out`}
-          >
-            Self-Hosting admirer
-          </p>
+    <div>
+      <div className="flex flex-col mx-auto max-w-fit md:items-center justify-center h-fit py-16 gap-4">
+        <h1 className="text-4xl md:text-8xl font-medium">Hi, I&apos;m <span className="bg-clip-text bg-gradient-to-br from-[#FFB1CD] via-[#C8E8FE] to-white text-transparent font-bold">Radiquum</span></h1>
+        <div className="flex flex-col md:flex-row md:gap-8 overflow-hidden">
+          <p className={`text-2xl md:text-4xl text-[#C8E8FE] ${isAnimated ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"} transition-[transform_opacity] duration-1000 ease-out`}>Developer</p>
+          <p className={`text-2xl md:text-4xl text-[#FF8686] ${isAnimated ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"} transition-[transform_opacity] duration-1000 ease-out delay-150`}>Amateur Photographer</p>
+          <p className={`text-2xl md:text-4xl text-[#FF851A] ${isAnimated ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"} transition-[transform_opacity] duration-1000 ease-out delay-300`}>Self-Hosting Admirer</p>
         </div>
       </div>
     </div>
