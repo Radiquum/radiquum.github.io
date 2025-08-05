@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { IconWithText } from "../components/IconWithText";
 import { Section } from "../components/Section";
+import { ProjectLink } from "../components/ProjectLink";
 
 const links = [
   {
@@ -8,54 +7,81 @@ const links = [
     text: "Anix",
     desc: "Unofficial web client for anixart",
     url: "https://github.com/radiquum/AniX",
+    preview: [
+      "/images/projects/anix/1.jpg",
+      "/images/projects/anix/2.png",
+      "/images/projects/anix/3.png",
+    ],
   },
   {
     icon: "/icons/mdi_github.svg",
     text: "Furaffinity-dl",
     desc: "Fork with additional functionality",
     url: "https://github.com/radiquum/furaffinity-dl",
+    preview: [
+      "/images/projects/anix/3.png",
+    ],
   },
   {
     icon: "/icons/mdi_github.svg",
     text: "TG-Photos",
     desc: "Google Photo like bot for Telegram",
     url: "https://github.com/radiquum/TG-Photos",
+    preview: [
+      "/images/projects/anix/3.png",
+    ],
   },
   {
     icon: "/icons/mdi_github.svg",
     text: "TIG",
     desc: "Generate images from text",
     url: "https://github.com/radiquum/TIG",
+    preview: [
+      "/images/projects/anix/1.jpg",
+      "/images/projects/anix/2.png",
+      "/images/projects/anix/3.png",
+    ],
   },
   {
     icon: "/icons/mdi_github.svg",
     text: "GitHub",
     desc: "Other Projects",
     url: "https://github.com/radiquum",
+    preview: [
+      "/images/projects/anix/3.png",
+    ],
   },
   {
     icon: "/icons/wahsu.svg",
     text: "wah.su",
     desc: "Self-Hosting project",
     url: "https://wah.su",
+    preview: [
+      "/images/projects/anix/3.png",
+    ],
   },
   {
     icon: "/icons/ic_baseline-telegram.svg",
     text: "Red Pandas Stickers",
     desc: "Collection of Red Panda sticker packs",
     url: "https://t.me/red_panda_stickers",
+    preview: [
+      "/images/projects/anix/1.jpg",
+      "/images/projects/anix/2.png",
+      "/images/projects/anix/3.png",
+    ],
   },
 ];
 
 export const Projects = () => {
   return (
     <Section>
-      <h2 className="text-4xl md:text-5xl border-1 px-3 py-2 rounded-xl border-white/5 bg-[#101316]/5">Projects</h2>
+      <h2 className="text-4xl md:text-5xl border-1 px-3 py-2 rounded-xl border-white/5 bg-[#101316]/5">
+        Projects
+      </h2>
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3">
         {links.map((item) => (
-          <Link href={item.url} key={`projects.link.${item.text}`}>
-            <IconWithText icon={item.icon} text={item.text} desc={item.desc} backgroundColor={"#101316"} backgroundOpacity={"5%"} />
-          </Link>
+          <ProjectLink key={`projects.link.${item.text}`} {...item} />
         ))}
       </div>
     </Section>

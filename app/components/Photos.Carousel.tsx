@@ -1,5 +1,3 @@
-import Styles from "./Photos.Carousel.module.css";
-
 import React, { useCallback, useEffect, useRef } from "react";
 import {
   EmblaCarouselType,

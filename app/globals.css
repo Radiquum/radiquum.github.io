@@ -95,3 +95,10 @@ body {
     --slide-size: 512px;
   }
 }
+
+.embla--projects {
+  --slide-size: 100%;
+  --slide-width: 100%;
+  --slide-height: 100%;
+  --slide-spacing: 16px;
+}
