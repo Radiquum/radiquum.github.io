@@ -23,6 +23,8 @@ export const ProjectLink = ({
   url,
   preview,
 }: ProjectLinkProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [timeoutId, setTimeoutId] = useState<any>(null);
   const [shouldUseCarousel] = useState(preview ? preview.length > 1 : false);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000, playOnInit: false }),
@@ -37,10 +39,19 @@ export const ProjectLink = ({
     const autoplay = emblaApi?.plugins()?.autoplay;
     if (!autoplay) return;
 
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
     if (!isInView) {
       autoplay.stop();
     } else {
-      autoplay.play();
+      const randTimeout = Math.floor(Math.random() * 2500);
+      setTimeoutId(
+        setTimeout(() => {
+          autoplay.play();
+        }, randTimeout)
+      );
     }
   }, [shouldUseCarousel, emblaApi, isInView]);
 
