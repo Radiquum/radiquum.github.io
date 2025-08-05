@@ -57,7 +57,7 @@ export const ProjectLink = ({
                     key={`embla.project.${text}.slide.${index}`}
                   >
                     <img
-                      className="embla__slide__img rounded-xl! border-white/5 border-1 group-hover:scale-105 duration-100 ease-in-out origin-bottom"
+                      className="embla__slide__img rounded-xl! aspect-video border-white/5 border-1 group-hover:scale-105 duration-100 ease-in-out origin-bottom"
                       src={item}
                       alt=""
                     />
@@ -79,7 +79,7 @@ export const ProjectLink = ({
           icon={icon}
           text={text}
           desc={desc}
-          backgroundColor={"#101316"}
+          backgroundColor={"#0a0a0a"}
           backgroundOpacity={"100%"}
           isGroup={true}
         />

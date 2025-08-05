@@ -19,7 +19,7 @@ const links = [
     desc: "Fork with additional functionality",
     url: "https://github.com/radiquum/furaffinity-dl",
     preview: [
-      "/images/projects/anix/3.png",
+      "/images/projects/fadl.png",
     ],
   },
   {
@@ -28,7 +28,9 @@ const links = [
     desc: "Google Photo like bot for Telegram",
     url: "https://github.com/radiquum/TG-Photos",
     preview: [
-      "/images/projects/anix/3.png",
+      "/images/projects/tgp/1.png",
+      "/images/projects/tgp/2.png",
+      "/images/projects/tgp/3.png",
     ],
   },
   {
@@ -37,9 +39,8 @@ const links = [
     desc: "Generate images from text",
     url: "https://github.com/radiquum/TIG",
     preview: [
-      "/images/projects/anix/1.jpg",
-      "/images/projects/anix/2.png",
-      "/images/projects/anix/3.png",
+      "/images/projects/tig/1.png",
+      "/images/projects/tig/2.png",
     ],
   },
   {
@@ -48,7 +49,7 @@ const links = [
     desc: "Other Projects",
     url: "https://github.com/radiquum",
     preview: [
-      "/images/projects/anix/3.png",
+      "/images/projects/gh.png",
     ],
   },
   {
@@ -57,7 +58,7 @@ const links = [
     desc: "Self-Hosting project",
     url: "https://wah.su",
     preview: [
-      "/images/projects/anix/3.png",
+      "/images/projects/wah-su.png",
     ],
   },
   {
@@ -66,9 +67,10 @@ const links = [
     desc: "Collection of Red Panda sticker packs",
     url: "https://t.me/red_panda_stickers",
     preview: [
-      "/images/projects/anix/1.jpg",
-      "/images/projects/anix/2.png",
-      "/images/projects/anix/3.png",
+      "/images/projects/rps/1.jpg",
+      "/images/projects/rps/2.jpg",
+      "/images/projects/rps/3.jpg",
+      "/images/projects/rps/4.jpg",
     ],
   },
 ];
