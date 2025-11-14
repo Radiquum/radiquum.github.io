@@ -33,11 +33,11 @@ export const Characters = () => {
 
   return (
     <Section>
-      <div className="flex flex-col gap-2 mt-2 md:flex-row md:justify-between md:items-center">
+      <div className="flex flex-col gap-2 mt-2 xl:flex-row md:justify-between md:items-center">
         <SectionTitle backgroundColor={"#ffb1cd"} backgroundOpacity={"5%"}>
           Characters
         </SectionTitle>
-        <div className="flex items-center gap-2 flex-1">
+        <div className="flex items-center gap-2 flex-1 w-full">
           {links.map((item) => (
             <Link
               href={item.url}
