@@ -1,5 +1,6 @@
 import { Section } from "../components/Section";
 import { ProjectLink } from "../components/ProjectLink";
+import { SectionTitle } from "../components/SectionTitle";
 
 const links = [
   {
@@ -18,9 +19,7 @@ const links = [
     text: "Furaffinity-dl",
     desc: "Fork with additional functionality",
     url: "https://github.com/radiquum/furaffinity-dl",
-    preview: [
-      "/images/projects/fadl.png",
-    ],
+    preview: ["/images/projects/fadl.png"],
   },
   {
     icon: "/icons/mdi_github.svg",
@@ -38,28 +37,21 @@ const links = [
     text: "TIG",
     desc: "Generate images from text",
     url: "https://github.com/radiquum/TIG",
-    preview: [
-      "/images/projects/tig/1.png",
-      "/images/projects/tig/2.png",
-    ],
+    preview: ["/images/projects/tig/1.png", "/images/projects/tig/2.png"],
   },
   {
     icon: "/icons/mdi_github.svg",
     text: "GitHub",
     desc: "Other Projects",
     url: "https://github.com/radiquum",
-    preview: [
-      "/images/projects/gh.png",
-    ],
+    preview: ["/images/projects/gh.png"],
   },
   {
     icon: "/icons/wahsu.svg",
     text: "wah.su",
     desc: "Self-Hosting project",
     url: "https://wah.su",
-    preview: [
-      "/images/projects/wah-su.png",
-    ],
+    preview: ["/images/projects/wah-su.png"],
   },
   {
     icon: "/icons/ic_baseline-telegram.svg",
@@ -78,9 +70,9 @@ const links = [
 export const Projects = () => {
   return (
     <Section>
-      <h2 className="text-4xl md:text-5xl border-1 px-3 py-2 rounded-xl border-white/5 bg-[#101316]/5">
+      <SectionTitle backgroundColor={"#101316"} backgroundOpacity={"5%"}>
         Projects
-      </h2>
+      </SectionTitle>
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3">
         {links.map((item) => (
           <ProjectLink key={`projects.link.${item.text}`} {...item} />

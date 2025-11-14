@@ -5,6 +5,7 @@ import { Section } from "../components/Section";
 import { IconWithText } from "../components/IconWithText";
 import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "../components/Photos.Carousel";
+import { SectionTitle } from "../components/SectionTitle";
 
 const links = [
   {
@@ -40,9 +41,9 @@ export const Photos = () => {
   return (
     <div className="flex flex-col gap-4">
       <Section>
-        <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-center">
-          <h2 className="text-4xl md:text-5xl border-1 px-3 py-2 rounded-xl border-white/5 bg-[#b1ffcd]/5 flex-1">Photos</h2>
-          <div className="flex items-center gap-2 flex-1">
+        <div className="flex flex-col gap-2 xl:flex-row md:justify-between md:items-center">
+          <SectionTitle backgroundColor={"#b1ffcd"} backgroundOpacity={"5%"}>Photos</SectionTitle>
+          <div className="flex items-center gap-2 flex-1 w-full">
             {links.map((item) => (
               <Link href={item.url} key={`photos.link.${item.text}`} className="flex-1">
                 <IconWithText

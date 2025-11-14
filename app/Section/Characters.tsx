@@ -8,6 +8,7 @@ import { CharacterImage } from "../components/CharacterImage";
 
 import { useInView } from "motion/react";
 import { useRef } from "react";
+import { SectionTitle } from "../components/SectionTitle";
 
 const links = [
   {
@@ -33,9 +34,9 @@ export const Characters = () => {
   return (
     <Section>
       <div className="flex flex-col gap-2 mt-2 md:flex-row md:justify-between md:items-center">
-        <h2 className="text-4xl md:text-5xl border-1 px-3 py-2 rounded-xl border-white/5 bg-[#ffb1cd]/5 flex-1">
+        <SectionTitle backgroundColor={"#ffb1cd"} backgroundOpacity={"5%"}>
           Characters
-        </h2>
+        </SectionTitle>
         <div className="flex items-center gap-2 flex-1">
           {links.map((item) => (
             <Link

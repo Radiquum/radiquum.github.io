@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { IconWithText } from "../components/IconWithText";
 import { Section } from "../components/Section";
+import { SectionTitle } from "../components/SectionTitle";
 
 const links = [
   {
@@ -50,8 +51,10 @@ const links = [
 export const Socials = () => {
   return (
     <Section>
-      <h2 className="text-4xl md:text-5xl border-1 px-3 py-2 rounded-xl border-white/5 bg-[#161213]/25">Socials</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2">
+      <SectionTitle backgroundColor={"#101316"} backgroundOpacity={"5%"}>
+        Socials
+      </SectionTitle>
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
         {links.map((item) => (
           <Link href={item.url} key={`socials.link.${item.text}`}>
             <IconWithText icon={item.icon} text={item.text} desc={item.desc} />
