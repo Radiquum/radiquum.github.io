@@ -37,10 +37,17 @@ export default function CharacterKentai() {
                   src="/characters/kentai_redpanda_thumb.jpg"
                   className="rounded-xl"
                 />
-                <a href="/characters/Kentai_Radiquum_RedPanda/Character%20Reference.png" className="absolute right-4 top-4" target="_blank">
-                <div className="bg-black/50 rounded-full backdrop-blur-lg p-4 hover:bg-black/75 transition-colors">
-                  <img src="/icons/mdi--external-link.svg" alt="open reference in a new tab"></img>
-                </div>
+                <a
+                  href="/characters/Kentai_Radiquum_RedPanda/Character%20Reference.png"
+                  className="absolute right-4 top-4"
+                  target="_blank"
+                >
+                  <div className="bg-black/50 rounded-full backdrop-blur-lg p-4 hover:bg-black/75 transition-colors">
+                    <img
+                      src="/icons/mdi--external-link.svg"
+                      alt="open reference in a new tab"
+                    ></img>
+                  </div>
                 </a>
               </div>
               <div className="flex flex-col gap-4">
@@ -52,8 +59,20 @@ export default function CharacterKentai() {
                     <p className="text-2xl">Male, average height, slim build</p>
                   </div>
                 </div>
+                <div className="flex-1"></div>
                 <div className="flex flex-col gap-4">
-                  <h2 className="text-5xl -mb-4">Colors</h2>
+                  <div className="flex gap-2 items-center -mb-4">
+                    <h2 className="text-5xl">Colors</h2>
+                    <a
+                      href="/characters/Kentai_Radiquum_RedPanda/Color%20Palette.png"
+                      target="_blank"
+                    >
+                      <img
+                        src="/icons/mdi--external-link.svg"
+                        alt="open reference in a new tab"
+                      ></img>
+                    </a>
+                  </div>
                   {Object.entries(CharacterColors).map(([category, colors]) => (
                     <div key={`color.${category}`}>
                       <h2 className="text-2xl">{category}</h2>
