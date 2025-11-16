@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { CharacterColor } from "@/app/components/CharacterColor";
 import Link from "next/link";
 const CharacterColors = {
-  Body: ["#ffb1ce", "#91d1fd", "#ffffff"],
-  Clothes: ["#492020", "#1c1a1d", "#39373b", "#494749", "#69676a", "#98959a"],
+  Body: ["#FFA5C0", "#91D1FD", "#FFFFFF"],
+  Clothes: ["#492020", "#1C1A1D", "#39373B", "#494749", "#69676A", "#98959A"],
 };
 
 export const metadata: Metadata = {
@@ -31,11 +31,18 @@ export default function CharacterKentai() {
         <div className="container mx-auto py-8 px-4">
           <div>
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-              <img
-                alt="Reference"
-                src="/characters/kentai_redpanda_thumb.jpg"
-                className="rounded-xl"
-              />
+              <div className="relative">
+                <img
+                  alt="Reference"
+                  src="/characters/kentai_redpanda_thumb.jpg"
+                  className="rounded-xl"
+                />
+                <a href="/characters/Kentai_Radiquum_RedPanda/Character%20Reference.png" className="absolute right-4 top-4" target="_blank">
+                <div className="bg-black/50 rounded-full backdrop-blur-lg p-4 hover:bg-black/75 transition-colors">
+                  <img src="/icons/mdi--external-link.svg" alt="open reference in a new tab"></img>
+                </div>
+                </a>
+              </div>
               <div className="flex flex-col gap-4">
                 <div>
                   <h2 className="text-5xl">Info</h2>
