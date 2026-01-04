@@ -26,7 +26,7 @@ function copyColor(hex: string) {
 export const CharacterColor = ({ color }: { color: string }) => {
   return (
     <div
-      className="bg-[var(--bg-color)] px-8 py-4 text-2xl rounded-xl border-1 border-white/5"
+      className="bg-[var(--bg-color)] px-2 sm:px-8 py-4 text-xl sm:text-2xl rounded-xl border-1 border-white/5"
       style={{ "--bg-color": color } as React.CSSProperties}
     >
       <div

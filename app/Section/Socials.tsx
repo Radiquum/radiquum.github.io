@@ -34,18 +34,18 @@ const links = [
     desc: "@radiquum",
     url: "https://vk.com/radiquum",
   },
-  {
-    icon: "/icons/ri_pixelfed-fill.svg",
-    text: "Pixey",
-    desc: "@radiquum@pixey.org",
-    url: "https://pixey.org/@radiquum",
-  },
-  {
-    icon: "/icons/ri_pixelfed-fill.svg",
-    text: "Instafops",
-    desc: "@radiquwum@Instafops.net",
-    url: "https://instafops.net/@radiquwum",
-  },
+  // {
+  //   icon: "/icons/ri_pixelfed-fill.svg",
+  //   text: "Pixey",
+  //   desc: "@radiquum@pixey.org",
+  //   url: "https://pixey.org/@radiquum",
+  // },
+  // {
+  //   icon: "/icons/ri_pixelfed-fill.svg",
+  //   text: "Instafops",
+  //   desc: "@radiquwum@Instafops.net",
+  //   url: "https://instafops.net/@radiquwum",
+  // },
 ];
 
 export const Socials = () => {

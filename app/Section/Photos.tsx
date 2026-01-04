@@ -14,12 +14,12 @@ const links = [
     desc: "@photowah",
     url: "https://t.me/photowah",
   },
-  {
-    icon: "/icons/simple-icons_immich.svg",
-    text: "Gallery",
-    desc: "wah.su/photos",
-    url: "https://wah.su/photos",
-  },
+  // {
+  //   icon: "/icons/simple-icons_immich.svg",
+  //   text: "Gallery",
+  //   desc: "wah.su/photos",
+  //   url: "https://wah.su/photos",
+  // },
 ];
 
 const OPTIONS: EmblaOptionsType = { loop: true };
